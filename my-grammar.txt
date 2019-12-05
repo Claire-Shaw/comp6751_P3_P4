@@ -15,12 +15,14 @@
 
 
 ### S expansion productions ###
-S -> S ',' Conj S
+S[SENTIMENT=?s] -> S ',' Coord[TYPE=disj] S[SENTIMENT=?s]
+S[SENTIMENT=?s] -> S[SENTIMENT=?s] ',' Coord[TYPE=conj] S[SENTIMENT=?s]
+S[SENTIMENT=?s] -> AdjP[SENTIMENT=?s]
 S -> S ';' S
 S -> PP ',' S
 
 # Declarative sentence
-S[MOOD=decl] -> NP[NUM=?n, PERS=?p] VP[NUM=?n, PERS?=p]
+S[MOOD=decl, SENTIMENT=?s] -> NP[NUM=?n, PERS=?p, SENTIMENT=?s] VP[NUM=?n, PERS?=p, SENTIMENT=?s]
 # Yes/no question
 S[MOOD=ynq] -> Aux NP[NUM=?n] VP[NUM=?n]
 # Wh-question
@@ -39,50 +41,55 @@ Clause[TYPE=vp_inf] -> VP[TENSE=infinitive]
 
 ### NP expansion productions ###
 
-NP[NUM=pl, PERS=3] -> Nom[NUM=pl] 
-NP[NUM=sg, PERS=3] -> Nom[MASS=1] 
+NP[NUM=pl, PERS=?p] -> Nom[NUM=pl, PERS=?p] 
+NP[NUM=?n, PERS=?p] -> Det[NUM=?n, SUBCAT=article]
+NP[NUM=sg, PERS=?p] -> Nom[PERS=?p, MASS=1] 
 NP[NUM=?n, PERS=3] -> PropN[NUM=?n, NEED_DET=0]
-NP[NUM=pl, PERS=?p] -> AdjP Nom[NUM=pl] 
-NP[NUM=?n, PERS=?p] -> AdjP Nom[NUM=?n, MASS=1]
-NP[NUM=?n, PERS=?p] -> AdjP PropN[NUM=?n, NEED_DET=0]
+NP[NUM=pl, PERS=?p] -> AdjP Nom[NUM=pl, PERS=?p] 
+NP[NUM=?n, PERS=?p] -> AdjP Nom[NUM=?n, PERS=?p, MASS=1]
+NP[NUM=?n, PERS=3] -> AdjP PropN[NUM=?n, NEED_DET=0]
 
-NP[NUM=?n, PERS=3] -> ProN[TYPE=subj, NUM=?n]
+NP[NUM=?n, PERS=?p] -> ProN[TYPE=subj, NUM=?n, PERS=?p]
 NP[NUM=?n, PERS=?p] -> ProN[TYPE=rflex, NUM=?n, PERS=?p]
-NP[NUM=?n, PERS=3] -> CD
 
 NP[NUM=?n, PERS=3] -> Det[NUM=?n] PropN[NUM=?n] 
-NP[NUM=?n, PERS=3] -> Det[NUM=?n] Nom[NUM=?n]
+NP[NUM=?n, PERS=?p] -> Det[NUM=?n] Nom[NUM=?n, PERS=?p]
 NP[NUM=?n, PERS=?p] -> Det[NUM=?n] '"' NP[NUM=?n, PERS=?p] '"'
 NP[NUM=?n, PERS=?p] -> Det[NUM=?n] AdjP Nom[NUM=?n, PERS=?p]
+NP[NUM=?n, PERS=?p, SENTIMENT=?s] -> Predeterminer Det[NUM=?n] AdjP[SENTIMENT=?s] Nom[NUM=?n, PERS=?p]
 
-## Conjoined NPs
-NP[NUM=pl, PERS=3] -> NP Conj NP
-NP[NUM=pl, PERS=3] -> NP ',' Conj NP ','
-NP[NUM=?n, PERS=?p] -> NP[NUM=?n, PERS=?p] ',' NP[NUM=?n, PERS=?p] 
-NP[NUM=?n, PERS=?p] -> NP[NUM=?n, PERS=?p] ',' NP[NUM=?n, PERS=?p] ','
+
+## Coordoinated NPs
+NP[NUM=pl, PERS=3] -> NP Coord[TYPE=conj] NP
+NP[NUM=pl, PERS=3] -> NP ',' Coord[TYPE=conj] NP ','
+
+
+
 NP[NUM=?n, PERS=?p] -> NP[NUM=?n, PERS=?p] Clause[TYPE=s]
 NP[NUM=?n, PERS=?p] -> NP[NUM=?n, PERS=?p] ',' Clause[TYPE=wh]
 
 
 
 ### Nom expansion productions ###
-Nom[NUM=?n, PERS=?p] -> Nom[NUM=?n, PERS=?p] PP
-Nom[NUM=?n, PERS=3] -> Noun Nom[NUM=?n]
-Nom[NUM=?n, PERS=3] -> Noun[NUM=?n]
-Nom[NUM=?n, PERS=?p] -> Nom[NUM=?n, PERS=?p] VP[TENSE=gerund]
-Nom[NUM=?n, PERS=?p] -> Nom[NUM=?n, PERS=?p] Clause[TYPE=relative]
+Nom[NUM=?n, PERS=?p, MASS=?m] -> Noun Nom[NUM=?n, PERS=?p, MASS=?m]
+
+Nom[NUM=?n, PERS=?p, MASS=?m, SENTIMENT=?s] -> Noun[NUM=?n, PERS=?p, MASS=?m, SENTIMENT=?s]
+
+Nom[NUM=?n, PERS=?p, MASS=?m] -> Nom[NUM=?n, PERS=?p, MASS=?m] PP
+Nom[NUM=?n, PERS=?p, MASS=?m] -> Nom[NUM=?n, PERS=?p, MASS=?m] VP[TENSE=gerund]
+Nom[NUM=?n, PERS=?p, MASS=?m] -> Nom[NUM=?n, PERS=?p, MASS=?m] Clause[TYPE=relative]
 
 
 
 ### VP expansion productions ###
 VP[TENSE=?t, NUM=?n] -> AdvP VP[TENSE=?t, NUM=?n] 
 VP[TENSE=?t, NUM=?n] -> IV[TENSE=?t, NUM=?n]
-VP[TENSE=?t, NUM=?n] -> VP[TENSE=?t, NUM=?n] Conj VP[TENSE=?t, NUM=?n]
+VP[TENSE=?t, NUM=?n] -> VP[TENSE=?t, NUM=?n] Coord VP[TENSE=?t, NUM=?n]
 
 VP[TENSE=?t, NUM=?n] -> TV[TENSE=?t, NUM=?n, ARG1=np] NP
 VP[TENSE=?t, NUM=?n] -> TV[TENSE=?t, NUM=?n, ARG1=pp] PP
 VP[TENSE=?t, NUM=?n] -> TV[TENSE=?t, NUM=?n, ARG1=cl] Clause[TYPE=s]
-VP[TENSE=?t, NUM=?n] -> TV[TENSE=?t, NUM=?n, ARG1=adj] AdjP
+VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> TV[TENSE=?t, NUM=?n, ARG1=adj] AdjP[SENTIMENT=?s]
 
 VP[TENSE=?t, NUM=?n] -> DTV[TENSE=?t, NUM=?n, ARG1=np, ARG2=pp] NP PP
 VP[TENSE=?t, NUM=?n] -> DTV[TENSE=?t, NUM=?n, ARG1=pp, ARG2=pp] PP PP
@@ -94,9 +101,12 @@ Aux[FORM=be, TENSE=present] -> 'is'
 Aux[FORM=be, TENSE=past] -> 'was'
 Aux[FORM=be, TENSE=inf] -> 'be'
 Aux[FORM=be, TENSE=past_participle] -> 'been'
+
 Aux[FORM=have, TENSE=present] -> 'has'
 Aux[FORM=have, TENSE=past] -> 'had'
 Aux[FORM=have, TENSE=inf] -> 'have'
+
+Aux[FORM=do, TENSE=present] -> 'does'
 
 # Passive Auxiliary ###
 Aux[TYPE=passive] -> 'should' | 'was' | 'is' | 'were' | 'is' 'being' | 'have'
@@ -160,14 +170,23 @@ PP -> P VP
 PP -> P S[MOOD=decl]
 
 ### AdjP expansion productions ###
-AdjP -> AdjP AdjP
-AdjP -> Adj
-AdjP -> AdjP Conj AdjP
-AdjP -> Adj ',' Adj 'and' Adj
+AdjP[SENTIMENT=?s] -> Adj[SENTIMENT=?s]
+AdjP[SENTIMENT=?s] -> AdvP Adj[SENTIMENT=?s]
+
+AdjP[SENTIMENT=?s] -> AdjP Adj[SENTIMENT=?s]
+
+AdjP[SENTIMENT=?s] -> AdjP[SENTIMENT=?s] Coord[TYPE=conj] AdjP[SENTIMENT=?s]
+AdjP[SENTIMENT=?s] -> AdjP[SENTIMENT=?s] ',' Coord[TYPE=conj] AdjP[SENTIMENT=?s]
+AdjP[SENTIMENT=?s] -> AdjP Coord[TYPE=disj] AdjP[SENTIMENT=?s]
+AdjP[SENTIMENT=?s] -> AdjP ',' Coord[TYPE=disj] AdjP[SENTIMENT=?s]
+
+## Negated AdjPs ##
+AdjP[SENTIMENT=neg] -> Neg AdjP[SENTIMENT=pos]
+AdjP[SENTIMENT=pos] -> Neg AdjP[SENTIMENT=neg]
+
+AdjP -> Adj ',' Adj Coord[TYPE=conj] Adj
 AdjP -> NP POSS
-AdjP -> Neg AdjP
-AdjP -> '"' AdjP '"'
-AdjP -> AdjP PP
+AdjP -> Neg AdjP 
 
 ### Adverb expansion productions ###
 AdvP -> Adv
@@ -176,14 +195,21 @@ AdvP -> Adv
 # Lexical Productions #
 # ################### #
 
+### Predeterminers ###
+Predeterminer -> 'such'
+
 ### Determiners ###
 Det[NUM=sg] -> 'this' | 'every' | 'a' | 'an'
 Det[NUM=pl] -> 'these' | 'all' |  'several' | 'some' 
 Det -> 'the' | 'her' | 'his' | 'its' | 'their'
 
+Det[NUM=sg, SUBCAT=article] -> 'this'
 
-### Conjunctions ###
-Conj -> 'and' | 'but' | 'or' | 'after'
+
+### Coordinators ###
+## Conjunctions
+Coord[TYPE=conj] -> 'and' 
+Coord[TYPE=disj] -> 'but' | 'or' 
 
 
 ### Possessive Marker ###
@@ -208,12 +234,14 @@ P ->  'through' | 'to' | 'under' | 'up' | 'with'
 CD -> '87' | '11pm' | 'one' | 'two' | 'seven' | '17' | '135' | '1655' | '7' | '1985'
 
 ### Adjectives ###
-Adj -> 'chronic' | 'physical' | 'mental' | 'outgoing' | 'new' | 'unnecessary' | 'youngest'| 'political' | 'local' 
-Adj -> 'fictional' | 'medical' | 'high' | 'least' | 'at' 'least' | 'former' | 'open' | 'forthright' 
+Adj -> 'flat' 
 
+Adj[SENTIMENT=pos] -> 'perfect' | 'terrific' | 'rich' | 'addicting'
+Adj[SENTIMENT=neg] -> 'uninventive' | 'simple'
+Adj[SENTIMENT=pos] -> 'fun'
 
 ### Adverbs ###
-Adv -> 'also' | 'soon' | 'quickly' 
+Adv -> 'also' | 'soon' | 'quickly' | 'just' | 'even'
 
 
 ### Pronouns ###
@@ -240,18 +268,8 @@ ProN[TYPE=relative] -> 'that' | 'who'
 
 ### Proper Nouns ###
 # Do not need to be preceded by determiner
-PropN[NUM=sg, NEED_DET=0] -> 'Kim' | 'Jody' | 'Isaac' 'Asimov' | 'Preem' 'Palver' | 'White' | 'Voss' | 'Becker'
-PropN[NUM=sg, NEED_DET=0] -> 'Saint' 'Joan' 'of' 'Arc' | 'Harry' 'M' 'Miller' | 'Jerry' 'Reinsdorf' | 'Bush'
-PropN[NUM=sg, NEED_DET=0] -> 'Dan' 'Collins' | 'Habib' | 'Edward' 'Philips' | 'Toni' 'Hoffman' | 'Dr' 'Patel'
-PropN[NUM=sg, NEED_DET=0] -> 'Jayant' 'Patel' | 'Kaew' 'Panjapetchkaew' | 'Toby' 'Gascon' | 'Huygens'
-PropN[NUM=sg, NEED_DET=0] -> 'Christiaan' 'Huygens' | 'Iyad' 'Allawi' | 'Mr' 'Kennedy' | 'Laurie' 'Garner'
-PropN[NUM=sg, NEED_DET=0] -> 'Mr' 'Margulies' | 'Mr' 'Habib' | 'Fathiya' 'Barghouti' 'Rheime' | 'Dr' 'Jayant' 'Patel'
-PropN[NUM=sg, NEED_DET=0] -> 'Mr' 'McClellan' | 'Mr' 'Bush' | 'Scott' 'McClellan' | 'George' 'W' 'Bush' | 'Boris' 'Franz' 'Becker'
+PropN[NUM=sg, NEED_DET=0] -> 'NG2'
 
-PropN[NUM=sg, NEED_DET=0] -> 'Al' 'Jazeera' | '1st' 'Marine' 'Division' | 'Google' | 'Time' 'Warner' 
-PropN[NUM=sg, NEED_DET=0] -> 'Minnesota' 'Gophers' | 'Boeing' | 'Greenpeace' | 'ESA' | 'July'
-PropN[NUM=sg, NEED_DET=0] -> 'September' '11' | 'Harvard' 'University' | 'Prime' 'Minister' | 'Wimbledon'
-PropN[NUM=sg, NEED_DET=0] -> 'Wednesday' | '1st' 'Marine' 'division' | 'Hamas' | 'Hurricane' 'Katrina' | 'President' 
 
 PropN[NUM=sg, NEED_DET=0] -> 'Rewe' | 'Germany' | 'Medan' | 'Malaysia' | 'Gaza' | 'Ahvaz' | 'Rutbah' | 'North' 'Carolina'
 PropN[NUM=sg, NEED_DET=0] -> 'Iraq' | 'Australia' | 'Penny' 'Market' | 'Romania' | 'US' | 'Titan' | 'Japan' | 'White' 'House' 
@@ -265,12 +283,7 @@ PropN[NUM=pl, NEED_DET=1, PERS=3] -> 'Houston' 'Astros' | 'White' 'Sox' | 'Musli
 
 ### Nouns ###
 # Singular
-Noun[NUM=sg, PERS=3] -> 'dog' | 'girl' | 'car' | 'child' | 'screenplay' | 'aircraft' | 'owner' | 'subsidiary' | 'woman'
-Noun[NUM=sg, PERS=3] -> 'monk' | 'brigade' | 'division' | 'inquiry' | 'inventor' | 'probe' | 'bomb' | 'attacker'
-Noun[NUM=sg, PERS=3] -> 'citizen' | 'night' | 'party' | 'character' | 'part' | 'writer' | 'insurgency' | 'team' | 'corporation'
-Noun[NUM=sg, PERS=3] -> 'year' | 'corporation' | 'hockey' | 'assassin' | "'suspension'" | 'city' | '30-year-old' | 'school'
-Noun[NUM=sg, PERS=3] -> 'teacher' | 'mother' | 'strip' | 'course' | 'mission' | 'astronomer' | 'champion'
-Noun[NUM=sg, PERS=3] -> 'book' | 'campaign' | 'war' | 'spokesman' | 'intervention' | 'role' | 'stage' | 'call' | 'player' | 'history'
+Noun[NUM=sg, PERS=3] -> 'sound' | 'campaign' | 'mode' | 'fact' | 'storyline'
 
 # Plural
 Noun[NUM=pl, PERS=3] -> 'dogs' | 'girls' | 'cars' | 'children' | 'personnel' | 'attacks' | 'people' | 'men' | 'protests' | 'countries' | 'forces'
@@ -285,7 +298,6 @@ Noun[NUM=sg, PERS=3, MASS=1] -> 'tennis' | 'handling' | 'propaganda' | 'military
 
 
 
-
 ### Verbs ###
 
 ## Tense: Simple Present ##
@@ -293,6 +305,7 @@ IV[TENSE=simple_pres, NUM=sg] -> 'disappears' | 'walks'
 
 TV[TENSE=simple_pres, NUM=sg, ARG1=np] -> 'is' | 'causes' | 'needs'
 TV[TENSE=simple_pres, NUM=sg, ARG1=pp] -> 'is' | 'resides' | 'plans' | 'works' | 'belongs' | 'comes' | 'suffers'
+TV[TENSE=simple_pres, NUM=sg, ARG1=adj] -> 'is'
 TV[TENSE=simple_pres, NUM=sg, ARG1=cl] -> 'says'
 
 IV[TENSE=simple_pres, NUM=pl] -> 'disappear' | 'walk'
@@ -316,6 +329,7 @@ TTV[TENSE=simple_past, ARG1=np, ARG2=pp, ARG3=pp] -> 'escaped'
 
 ## Tense: Infinitive ##
 IV[TENSE=infinitive] -> 'disappear' | 'walk' 
+IV[TENSE=infinitive, SENTIMENT=neg] -> 'disappoint'
 TV[TENSE=infinitive, ARG1=pp] -> 'work' 
 TV[TENSE=infinitive, ARG1=np] -> 'sell' | 'combat'
 

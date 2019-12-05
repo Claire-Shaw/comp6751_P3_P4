@@ -1,10 +1,10 @@
 from nltk.parse import FeatureEarleyChartParser 
 from nltk import grammar, parse
 
-no_caps = ["They", "Former", "The", "Its", "Personnel", "Outgoing", "A", "Around", "An", "Incarceration", "Now", "Their","Despite", "In", "His"]
+keep_caps = []
 
-to_parse = [1, 7]
-success = [2, 3, 4, 5, 6, 8]
+to_parse = [5]
+success = [1, 2, 3]
 #to_parse = success
 
 if len(to_parse) == 0:
@@ -12,15 +12,16 @@ if len(to_parse) == 0:
 print(to_parse)
 
 sentences = []
-with open("D2.txt", "r") as f:
+with open("test_sent.txt", "r") as f:
     for i, line in enumerate(f):
         if i+1 in to_parse:
             processed_line = line.replace('.', '')
+            processed_line = processed_line.replace('!', '')
             processed_line = processed_line.replace('"', ' " ')
             processed_line = processed_line.replace(',',' ,')
             processed_line = processed_line.replace(';',' ;')
             processed_line = processed_line.replace("'s", " 's").split()
-            if processed_line[0] in no_caps:
+            if processed_line[0] not in keep_caps:
                 processed_line[0] = processed_line[0].lower()
             sentences.append([i+1, line, processed_line])
 
