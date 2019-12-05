@@ -107,6 +107,7 @@ Aux[FORM=have, TENSE=past] -> 'had'
 Aux[FORM=have, TENSE=inf] -> 'have'
 
 Aux[FORM=do, TENSE=present] -> 'does'
+Aux[FORM=do, TENSE=past] -> 'did'
 
 # Passive Auxiliary ###
 Aux[TYPE=passive] -> 'should' | 'was' | 'is' | 'were' | 'is' 'being' | 'have'
@@ -181,12 +182,11 @@ AdjP[SENTIMENT=?s] -> AdjP Coord[TYPE=disj] AdjP[SENTIMENT=?s]
 AdjP[SENTIMENT=?s] -> AdjP ',' Coord[TYPE=disj] AdjP[SENTIMENT=?s]
 
 ## Negated AdjPs ##
-AdjP[SENTIMENT=neg] -> Neg AdjP[SENTIMENT=pos]
 AdjP[SENTIMENT=pos] -> Neg AdjP[SENTIMENT=neg]
+AdjP[SENTIMENT=neg] -> Neg AdjP[SENTIMENT=pos]
 
 AdjP -> Adj ',' Adj Coord[TYPE=conj] Adj
 AdjP -> NP POSS
-AdjP -> Neg AdjP 
 
 ### Adverb expansion productions ###
 AdvP -> Adv
@@ -222,6 +222,7 @@ Wh -> 'who' | 'what' | 'where' | 'when' | 'why' | 'how'
 
 ### Negation ###
 Neg -> 'not'
+Neg -> "n't"
 
 
 ### Prepositions ###
@@ -235,13 +236,12 @@ CD -> '87' | '11pm' | 'one' | 'two' | 'seven' | '17' | '135' | '1655' | '7' | '1
 
 ### Adjectives ###
 Adj -> 'flat' 
-
-Adj[SENTIMENT=pos] -> 'perfect' | 'terrific' | 'rich' | 'addicting'
-Adj[SENTIMENT=neg] -> 'uninventive' | 'simple'
-Adj[SENTIMENT=pos] -> 'fun'
+Adj[SENTIMENT=pos] -> 'perfect' | 'terrific' | 'rich' | 'addicting' | 'fun'
+Adj[SENTIMENT=neg] -> 'uninventive' | 'simple' | 'disappointed'
 
 ### Adverbs ###
 Adv -> 'also' | 'soon' | 'quickly' | 'just' | 'even'
+
 
 
 ### Pronouns ###
@@ -270,10 +270,6 @@ ProN[TYPE=relative] -> 'that' | 'who'
 # Do not need to be preceded by determiner
 PropN[NUM=sg, NEED_DET=0] -> 'NG2'
 
-
-PropN[NUM=sg, NEED_DET=0] -> 'Rewe' | 'Germany' | 'Medan' | 'Malaysia' | 'Gaza' | 'Ahvaz' | 'Rutbah' | 'North' 'Carolina'
-PropN[NUM=sg, NEED_DET=0] -> 'Iraq' | 'Australia' | 'Penny' 'Market' | 'Romania' | 'US' | 'Titan' | 'Japan' | 'White' 'House' 
-
 PropN[NUM=pl, NEED_DET=0] -> 'Muslims' | 'Iranians'
 
 # Must be preceded by determiner
@@ -286,16 +282,11 @@ PropN[NUM=pl, NEED_DET=1, PERS=3] -> 'Houston' 'Astros' | 'White' 'Sox' | 'Musli
 Noun[NUM=sg, PERS=3] -> 'sound' | 'campaign' | 'mode' | 'fact' | 'storyline'
 
 # Plural
-Noun[NUM=pl, PERS=3] -> 'dogs' | 'girls' | 'cars' | 'children' | 'personnel' | 'attacks' | 'people' | 'men' | 'protests' | 'countries' | 'forces'
-Noun[NUM=pl, PERS=3] -> 'wounded' | 'conditions' | 'leaders' | 'stores' | 'women' | 'mayors' | 'deaths' | 'years' | 'members' | 'weapons' | 'provisions' | 'singles'
+Noun[NUM=pl, PERS=3] -> 'dogs' | 'girls' | 'cars' 
 
-# Exception
-Noun[PERS=3] -> 'mayor' | 'world'
 
 # Mass nouns
-Noun[NUM=sg, PERS=3, MASS=1] -> 'cancer' | 'incarceration' | 'time' | 'police' | 'nothing' | 'middle' | 'night' | 'treatment' | 'money' | 'information'
-Noun[NUM=sg, PERS=3, MASS=1] -> 'tennis' | 'handling' | 'propaganda' | 'military' | 'freedom' | 'tyranny' | 'tennis' | 'history'
-
+Noun[NUM=sg, PERS=3, MASS=1] -> 'cancer' | 'incarceration' | 'time' 
 
 
 ### Verbs ###
