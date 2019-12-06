@@ -1,12 +1,3386 @@
 
 ---------------------------------------
 Sentece 1: This CD was horrible.
-Num of trees: 1
+Num of trees: 3
 (S[MOOD='decl', SENTIMENT='neg']
-  (NP[NUM='sg', PERS=3]
+  (NP[NUM='sg', PERS=?p, POSITION=?x]
+    (NP[NUM='sg', PERS=?p]
+      (Det[NUM='sg', SUBCAT='demonstrative'] this))
+    (Clause[SENTIMENT=?s, TYPE='s']
+      (S[SENTIMENT=?s]
+        (NP[NUM='sg', PERS=3]
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] CD))))))
+  (VP[NUM=?n, SENTIMENT='neg', TENSE='simple_past']
+    (TV[ARG1='adj', TENSE='simple_past'] was)
+    (AdjP[SENTIMENT='neg'] (Adj[SENTIMENT='neg'] horrible))))
+
+(S[MOOD='decl', SENTIMENT='neg']
+  (NP[NUM='sg', PERS=3, SENTIMENT=?s]
     (Det[NUM='sg', SUBCAT='demonstrative'] this)
     (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
       (Noun[NUM='sg', PERS=3] CD)))
   (VP[NUM=?n, SENTIMENT='neg', TENSE='simple_past']
     (TV[ARG1='adj', TENSE='simple_past'] was)
     (AdjP[SENTIMENT='neg'] (Adj[SENTIMENT='neg'] horrible))))
+
+(S[SENTIMENT=?s]
+  (NP[NUM='sg', PERS=?p, POSITION=?x]
+    (NP[NUM='sg', PERS=?p]
+      (Det[NUM='sg', SUBCAT='demonstrative'] this))
+    (Clause[SENTIMENT='neg', TYPE='s']
+      (S[MOOD='decl', SENTIMENT='neg']
+        (NP[NUM='sg', PERS=3]
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] CD)))
+        (VP[NUM=?n, SENTIMENT='neg', TENSE='simple_past']
+          (TV[ARG1='adj', TENSE='simple_past'] was)
+          (AdjP[SENTIMENT='neg'] (Adj[SENTIMENT='neg'] horrible)))))))
+
+---------------------------------------
+Sentece 2: The controls are lousy.
+Num of trees: 1
+(S[MOOD='decl', SENTIMENT='neg']
+  (NP[NUM='pl', PERS=3, SENTIMENT=?s]
+    (Det[SUBCAT='article'] the)
+    (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+      (Noun[NUM='pl', PERS=3] controls)))
+  (VP[NUM='pl', SENTIMENT='neg', TENSE='simple_pres']
+    (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+    (AdjP[SENTIMENT='neg'] (Adj[SENTIMENT='neg'] lousy))))
+
+---------------------------------------
+Sentece 3: This is not fun.
+Num of trees: 1
+(S[MOOD='decl', SENTIMENT='neg']
+  (NP[NUM='sg', PERS=?p]
+    (Det[NUM='sg', SUBCAT='demonstrative'] this))
+  (VP[NUM='sg', SENTIMENT='neg', TENSE='simple_pres']
+    (TV[ARG1='adj', NUM='sg', TENSE='simple_pres'] is)
+    (AdjP[SENTIMENT='neg']
+      (Neg[] not)
+      (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] fun)))))
+
+---------------------------------------
+Sentece 4: I was extremely disappointed.
+Num of trees: 1
+(S[MOOD='decl', SENTIMENT='neg']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM=?n, SENTIMENT='neg', TENSE='simple_past']
+    (TV[ARG1='adj', TENSE='simple_past'] was)
+    (AdjP[SENTIMENT='neg']
+      (AdvP[] (Adv[] extremely))
+      (Adj[SENTIMENT='neg'] disappointed))))
+
+---------------------------------------
+Sentece 5: This movie is the pits.
+Num of trees: 3
+(S[MOOD='decl', SENTIMENT=?s]
+  (NP[NUM='sg', PERS=?p, POSITION=?x]
+    (NP[NUM='sg', PERS=?p]
+      (Det[NUM='sg', SUBCAT='demonstrative'] this))
+    (Clause[SENTIMENT=?s, TYPE='s']
+      (S[SENTIMENT=?s]
+        (NP[NUM='sg', PERS=3]
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] movie))))))
+  (VP[NUM='sg', SENTIMENT=?s, TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', TENSE='simple_pres'] is)
+    (NP[NUM='pl', PERS=3, SENTIMENT=?s]
+      (Det[SUBCAT='article'] the)
+      (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='pl', PERS=3] pits)))))
+
+(S[MOOD='decl', SENTIMENT=?s]
+  (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+    (Det[NUM='sg', SUBCAT='demonstrative'] this)
+    (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+      (Noun[NUM='sg', PERS=3] movie)))
+  (VP[NUM='sg', SENTIMENT=?s, TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', TENSE='simple_pres'] is)
+    (NP[NUM='pl', PERS=3, SENTIMENT=?s]
+      (Det[SUBCAT='article'] the)
+      (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='pl', PERS=3] pits)))))
+
+(S[SENTIMENT=?s]
+  (NP[NUM='sg', PERS=?p, POSITION=?x]
+    (NP[NUM='sg', PERS=?p]
+      (Det[NUM='sg', SUBCAT='demonstrative'] this))
+    (Clause[SENTIMENT=?s, TYPE='s']
+      (S[MOOD='decl', SENTIMENT=?s]
+        (NP[NUM='sg', PERS=3]
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] movie)))
+        (VP[NUM='sg', SENTIMENT=?s, TENSE='simple_pres']
+          (TV[ARG1='np', NUM='sg', TENSE='simple_pres'] is)
+          (NP[NUM='pl', PERS=3, SENTIMENT=?s]
+            (Det[SUBCAT='article'] the)
+            (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='pl', PERS=3] pits))))))))
+
+---------------------------------------
+Sentece 6: I liked this film.
+Num of trees: 2
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+    (TV[ARG1='np', SENTIMENT='pos', TENSE='simple_past'] liked)
+    (NP[NUM='sg', PERS=?p, POSITION=?x]
+      (NP[NUM='sg', PERS=?p]
+        (Det[NUM='sg', SUBCAT='demonstrative'] this))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] film))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+    (TV[ARG1='np', SENTIMENT='pos', TENSE='simple_past'] liked)
+    (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+      (Det[NUM='sg', SUBCAT='demonstrative'] this)
+      (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='sg', PERS=3] film)))))
+
+---------------------------------------
+Sentece 7: This is a really cool story.
+Num of trees: 1
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[NUM='sg', PERS=?p]
+    (Det[NUM='sg', SUBCAT='demonstrative'] this))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', TENSE='simple_pres'] is)
+    (NP[NUM='sg', PERS=3, SENTIMENT='pos']
+      (Det[NUM='sg', SUBCAT='article'] a)
+      (AdjP[SENTIMENT='pos']
+        (AdvP[] (Adv[] really))
+        (Adj[SENTIMENT='pos'] cool))
+      (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='sg', PERS=3] story)))))
+
+---------------------------------------
+Sentece 9: A good beginner's tablet.
+Num of trees: 3
+(S[SENTIMENT='pos']
+  (NP[NUM='sg', PERS=3, SENTIMENT='pos']
+    (Det[NUM='sg', SUBCAT='article'] a)
+    (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] good))
+    (Nom[MASS=?m, NUM='sg', PERS=3]
+      (DP[]
+        (NP[NUM='sg', PERS=3]
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] beginner)))
+        (POSS[] 's))
+      (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='sg', PERS=3] tablet)))))
+
+(S[SENTIMENT=?s]
+  (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+    (Det[NUM='sg', SUBCAT='article'] a)
+    (Nom[MASS=?m, NUM='sg', PERS=3]
+      (DP[]
+        (NP[NUM='sg', PERS=3, SENTIMENT='pos']
+          (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] good))
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] beginner)))
+        (POSS[] 's))
+      (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='sg', PERS=3] tablet)))))
+
+(S[SENTIMENT=?s]
+  (NP[NUM='sg', PERS=3]
+    (Nom[MASS=?m, NUM='sg', PERS=3]
+      (DP[]
+        (NP[NUM='sg', PERS=3, SENTIMENT='pos']
+          (Det[NUM='sg', SUBCAT='article'] a)
+          (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] good))
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] beginner)))
+        (POSS[] 's))
+      (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='sg', PERS=3] tablet)))))
+
+---------------------------------------
+Sentece 10: The game has a very easy learning curve.
+Num of trees: 2
+(S[MOOD='decl', SENTIMENT=?s]
+  (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+    (Det[SUBCAT='article'] the)
+    (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+      (Noun[NUM='sg', PERS=3] game)))
+  (VP[NUM='sg', SENTIMENT=?s, TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', TENSE='simple_pres'] has)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT='pos']
+        (Det[NUM='sg', SUBCAT='article'] a)
+        (AdjP[SENTIMENT='pos']
+          (AdvP[] (Adv[] very))
+          (Adj[SENTIMENT='pos'] easy))
+        (Nom[MASS=1, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[MASS=1, NUM='sg', PERS=3] learning)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] curve))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+    (Det[SUBCAT='article'] the)
+    (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+      (Noun[NUM='sg', PERS=3] game)))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', TENSE='simple_pres'] has)
+    (NP[NUM='sg', PERS=3, SENTIMENT='pos']
+      (Det[NUM='sg', SUBCAT='article'] a)
+      (AdjP[SENTIMENT='pos']
+        (AdvP[] (Adv[] very))
+        (Adj[SENTIMENT='pos'] easy))
+      (Nom[MASS=?m, NUM='sg', PERS=3]
+        (Noun[MASS=1, NUM='sg', PERS=3] learning)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] curve))))))
+
+---------------------------------------
+Sentece 11: It's your choice.
+Num of trees: 1
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=3, TYPE='subj'] it))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', TENSE='simple_pres'] is)
+    (NP[NUM='sg', PERS=3, SENTIMENT='pos']
+      (Det[SUBCAT='possessive'] your)
+      (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT='pos']
+        (Noun[NUM='sg', PERS=3, SENTIMENT='pos'] choice)))))
+
+---------------------------------------
+Sentece 12: The gameplay is very, very good.
+Num of trees: 1
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+    (Det[SUBCAT='article'] the)
+    (Nom[MASS=1, NUM='sg', PERS=3, SENTIMENT=?s]
+      (Noun[MASS=1, NUM='sg', PERS=3] gameplay)))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='adj', NUM='sg', TENSE='simple_pres'] is)
+    (AdjP[SENTIMENT='pos']
+      (AdvP[] (Adv[] very) , (AdvP[] (Adv[] very)))
+      (Adj[SENTIMENT='pos'] good))))
+
+---------------------------------------
+Sentece 13: I loved the strong, independent main character.
+Num of trees: 1
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+    (TV[ARG1='np', SENTIMENT='pos', TENSE='simple_past'] loved)
+    (NP[NUM='sg', PERS=3, SENTIMENT='pos']
+      (Det[SUBCAT='article'] the)
+      (AdjP[SENTIMENT='pos']
+        (AdjP[SENTIMENT='pos']
+          (Adj[SENTIMENT='pos'] strong)
+          ,
+          (Adj[SENTIMENT='pos'] independent))
+        (Adj[] main))
+      (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='sg', PERS=3] character)))))
+
+---------------------------------------
+Sentece 15: Guthrie is a lyrical genius.
+Num of trees: 1
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[NUM='sg', PERS=3] (ProperNoun[NEED_DET=0, NUM='sg'] Guthrie))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', TENSE='simple_pres'] is)
+    (NP[NUM='sg', PERS=3, SENTIMENT='pos']
+      (Det[NUM='sg', SUBCAT='article'] a)
+      (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] lyrical))
+      (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT='pos']
+        (Noun[NUM='sg', PERS=3, SENTIMENT='pos'] genius)))))
+
+---------------------------------------
+Sentece 17: Great remakes are few and rare.
+Num of trees: 2
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[NUM='pl', PERS=3, SENTIMENT='pos']
+    (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] great))
+    (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+      (Noun[NUM='pl', PERS=3] remakes)))
+  (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+    (AdjP[SENTIMENT='pos']
+      (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] few))
+      (Coord[TYPE='conj'] and)
+      (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] rare)))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[NUM='pl', PERS=3, SENTIMENT='pos']
+    (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] great))
+    (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+      (Noun[NUM='pl', PERS=3] remakes)))
+  (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+    (AdjP[SENTIMENT='pos']
+      (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] few))
+      (Coord[TYPE='conj'] and)
+      (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] rare)))))
+
+---------------------------------------
+Sentece 18: I read the book and like it very much.
+Num of trees: 5
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+      (TV[ARG1='np', TENSE='simple_past'] read)
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] book))))
+    (Coord[TYPE='conj'] and)
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+        (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+          (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+            like)
+          (NP[POSITION='object']
+            (ProN[NUM='sg', PERS=3, TYPE='obj'] it)))
+        (AdvP[] (Adv[] very)))
+      (AdvP[] (Adv[] much)))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+      (TV[ARG1='np', TENSE='simple_past'] read)
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] book))))
+    (Coord[TYPE='conj'] and)
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+        (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+          like)
+        (NP[POSITION='object']
+          (ProN[NUM='sg', PERS=3, TYPE='obj'] it)))
+      (AdvP[] (Adv[] very) (AdvP[] (Adv[] much))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+        (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+          (TV[ARG1='np', TENSE='simple_past'] read)
+          (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+            (Det[SUBCAT='article'] the)
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] book))))
+        (Coord[TYPE='conj'] and)
+        (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+          (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+            like)
+          (NP[POSITION='object']
+            (ProN[NUM='sg', PERS=3, TYPE='obj'] it))))
+      (AdvP[] (Adv[] very)))
+    (AdvP[] (Adv[] much))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+        (TV[ARG1='np', TENSE='simple_past'] read)
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] book))))
+      (Coord[TYPE='conj'] and)
+      (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+        (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+          (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+            like)
+          (NP[POSITION='object']
+            (ProN[NUM='sg', PERS=3, TYPE='obj'] it)))
+        (AdvP[] (Adv[] very))))
+    (AdvP[] (Adv[] much))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+        (TV[ARG1='np', TENSE='simple_past'] read)
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] book))))
+      (Coord[TYPE='conj'] and)
+      (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+        (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+          like)
+        (NP[POSITION='object']
+          (ProN[NUM='sg', PERS=3, TYPE='obj'] it))))
+    (AdvP[] (Adv[] very) (AdvP[] (Adv[] much)))))
+
+---------------------------------------
+Sentece 19: I like the character Eragon and he seemed to be maturing in this book.
+Num of trees: 56
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT='pos', TYPE='s']
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[NUM='pl', PERS=3, POSITION='subject']
+              (NP[NUM='sg', PERS=3]
+                (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+              (Coord[TYPE='conj'] and)
+              (NP[POSITION='subject']
+                (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he)))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (S[SENTIMENT=?s]
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this))))))))))))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] book))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT='pos', TYPE='s']
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[NUM='pl', PERS=3, POSITION='subject']
+              (NP[NUM='sg', PERS=3]
+                (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+              (Coord[TYPE='conj'] and)
+              (NP[POSITION='subject']
+                (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he)))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (NP[NUM='sg', PERS=?p]
+                          (Det[NUM='sg', SUBCAT='demonstrative']
+                            this)))))))))))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] book))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT='pos', TYPE='s']
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[NUM='sg', PERS=3, POSITION=?x]
+              (NP[NUM='sg', PERS=3]
+                (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+              (Clause[SENTIMENT=?s, TYPE='s']
+                (S[SENTIMENT=?s]
+                  (Coord[TYPE='conj'] and)
+                  (S[SENTIMENT=?s]
+                    (NP[POSITION='subject']
+                      (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                        he))))))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (S[SENTIMENT=?s]
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this))))))))))))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] book))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT='pos', TYPE='s']
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[NUM='sg', PERS=3, POSITION=?x]
+              (NP[NUM='sg', PERS=3]
+                (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+              (Clause[SENTIMENT=?s, TYPE='s']
+                (S[SENTIMENT=?s]
+                  (Coord[TYPE='conj'] and)
+                  (S[SENTIMENT=?s]
+                    (NP[POSITION='subject']
+                      (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                        he))))))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (NP[NUM='sg', PERS=?p]
+                          (Det[NUM='sg', SUBCAT='demonstrative']
+                            this)))))))))))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] book))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT='pos', TYPE='s']
+          (S[SENTIMENT='pos']
+            (S[SENTIMENT=?s]
+              (NP[NUM='sg', PERS=3]
+                (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))
+            (Coord[TYPE='conj'] and)
+            (S[MOOD='decl', SENTIMENT='pos']
+              (NP[POSITION='subject']
+                (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+                (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                  to
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                    (TV[ARG1='np', TENSE='infinitive'] be)
+                    (NP[NUM='sg', SENTIMENT='pos']
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                        (TV[SENTIMENT='pos', TENSE='gerund']
+                          (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                            maturing))
+                        (PP[]
+                          (P[] in)
+                          (S[SENTIMENT=?s]
+                            (NP[NUM='sg', PERS=?p]
+                              (Det[NUM='sg', SUBCAT='demonstrative']
+                                this)))))))))))))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] book))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT='pos', TYPE='s']
+          (S[SENTIMENT='pos']
+            (S[SENTIMENT=?s]
+              (NP[NUM='sg', PERS=3]
+                (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))
+            (Coord[TYPE='conj'] and)
+            (S[MOOD='decl', SENTIMENT='pos']
+              (NP[POSITION='subject']
+                (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+                (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                  to
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                    (TV[ARG1='np', TENSE='infinitive'] be)
+                    (NP[NUM='sg', SENTIMENT='pos']
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                        (TV[SENTIMENT='pos', TENSE='gerund']
+                          (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                            maturing))
+                        (PP[]
+                          (P[] in)
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this))))))))))))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] book))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT='pos', TYPE='s']
+          (Clause[SENTIMENT=?s, TYPE='s']
+            (S[SENTIMENT=?s]
+              (NP[NUM='sg', PERS=3]
+                (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))))
+          (Coord[TYPE='conj'] and)
+          (Clause[SENTIMENT='pos', TYPE='s']
+            (S[MOOD='decl', SENTIMENT='pos']
+              (NP[POSITION='subject']
+                (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+                (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                  to
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                    (TV[ARG1='np', TENSE='infinitive'] be)
+                    (NP[NUM='sg', SENTIMENT='pos']
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                        (TV[SENTIMENT='pos', TENSE='gerund']
+                          (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                            maturing))
+                        (PP[]
+                          (P[] in)
+                          (S[SENTIMENT=?s]
+                            (NP[NUM='sg', PERS=?p]
+                              (Det[NUM='sg', SUBCAT='demonstrative']
+                                this)))))))))))))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] book))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT='pos', TYPE='s']
+          (Clause[SENTIMENT=?s, TYPE='s']
+            (S[SENTIMENT=?s]
+              (NP[NUM='sg', PERS=3]
+                (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))))
+          (Coord[TYPE='conj'] and)
+          (Clause[SENTIMENT='pos', TYPE='s']
+            (S[MOOD='decl', SENTIMENT='pos']
+              (NP[POSITION='subject']
+                (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+                (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                  to
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                    (TV[ARG1='np', TENSE='infinitive'] be)
+                    (NP[NUM='sg', SENTIMENT='pos']
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                        (TV[SENTIMENT='pos', TENSE='gerund']
+                          (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                            maturing))
+                        (PP[]
+                          (P[] in)
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this))))))))))))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] book))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, POSITION=?x]
+          (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+            (Det[SUBCAT='article'] the)
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] character)))
+          (Clause[SENTIMENT=?s, TYPE='s']
+            (S[SENTIMENT=?s]
+              (NP[NUM='sg', PERS=3]
+                (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))))
+        (Clause[SENTIMENT='pos', TYPE='s']
+          (S[SENTIMENT='pos']
+            (Coord[TYPE='conj'] and)
+            (S[MOOD='decl', SENTIMENT='pos']
+              (NP[POSITION='subject']
+                (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+                (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                  to
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                    (TV[ARG1='np', TENSE='infinitive'] be)
+                    (NP[NUM='sg', SENTIMENT='pos']
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                        (TV[SENTIMENT='pos', TENSE='gerund']
+                          (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                            maturing))
+                        (PP[]
+                          (P[] in)
+                          (S[SENTIMENT=?s]
+                            (NP[NUM='sg', PERS=?p]
+                              (Det[NUM='sg', SUBCAT='demonstrative']
+                                this)))))))))))))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] book))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, POSITION=?x]
+          (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+            (Det[SUBCAT='article'] the)
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] character)))
+          (Clause[SENTIMENT=?s, TYPE='s']
+            (S[SENTIMENT=?s]
+              (NP[NUM='sg', PERS=3]
+                (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))))
+        (Clause[SENTIMENT='pos', TYPE='s']
+          (S[SENTIMENT='pos']
+            (Coord[TYPE='conj'] and)
+            (S[MOOD='decl', SENTIMENT='pos']
+              (NP[POSITION='subject']
+                (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+                (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                  to
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                    (TV[ARG1='np', TENSE='infinitive'] be)
+                    (NP[NUM='sg', SENTIMENT='pos']
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                        (TV[SENTIMENT='pos', TENSE='gerund']
+                          (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                            maturing))
+                        (PP[]
+                          (P[] in)
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this))))))))))))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] book))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3, POSITION=?x]
+              (NP[NUM='sg', PERS=3]
+                (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+              (Clause[SENTIMENT='pos', TYPE='s']
+                (S[SENTIMENT='pos']
+                  (Coord[TYPE='conj'] and)
+                  (S[MOOD='decl', SENTIMENT='pos']
+                    (NP[POSITION='subject']
+                      (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                        he))
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+                      (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                      (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                        to
+                        (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                          (TV[ARG1='np', TENSE='infinitive'] be)
+                          (NP[NUM='sg', SENTIMENT='pos']
+                            (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                              (TV[SENTIMENT='pos', TENSE='gerund']
+                                (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                                  maturing))
+                              (PP[]
+                                (P[] in)
+                                (S[SENTIMENT=?s]
+                                  (NP[NUM='sg', PERS=?p]
+                                    (Det[NUM='sg', SUBCAT='demonstrative']
+                                      this))))))))))))))))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] book))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3, POSITION=?x]
+              (NP[NUM='sg', PERS=3]
+                (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+              (Clause[SENTIMENT='pos', TYPE='s']
+                (S[SENTIMENT='pos']
+                  (Coord[TYPE='conj'] and)
+                  (S[MOOD='decl', SENTIMENT='pos']
+                    (NP[POSITION='subject']
+                      (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                        he))
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+                      (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                      (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                        to
+                        (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                          (TV[ARG1='np', TENSE='infinitive'] be)
+                          (NP[NUM='sg', SENTIMENT='pos']
+                            (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                              (TV[SENTIMENT='pos', TENSE='gerund']
+                                (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                                  maturing))
+                              (PP[]
+                                (P[] in)
+                                (NP[NUM='sg', PERS=?p]
+                                  (Det[NUM='sg', SUBCAT='demonstrative']
+                                    this)))))))))))))))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] book))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3, POSITION=?x]
+            (NP[NUM='sg', PERS=3, POSITION=?x]
+              (NP[NUM='sg', PERS=3]
+                (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+              (Clause[SENTIMENT='pos', TYPE='s']
+                (S[SENTIMENT='pos']
+                  (Coord[TYPE='conj'] and)
+                  (S[MOOD='decl', SENTIMENT='pos']
+                    (NP[POSITION='subject']
+                      (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                        he))
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+                      (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                      (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                        to
+                        (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                          (TV[ARG1='np', TENSE='infinitive'] be)
+                          (NP[NUM='sg', SENTIMENT='pos']
+                            (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                              (TV[SENTIMENT='pos', TENSE='gerund']
+                                (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                                  maturing))
+                              (PP[]
+                                (P[] in)
+                                (S[SENTIMENT=?s]
+                                  (NP[NUM='sg', PERS=?p]
+                                    (Det[NUM='sg', SUBCAT='demonstrative']
+                                      this)))))))))))))
+            (Clause[SENTIMENT=?s, TYPE='s']
+              (S[SENTIMENT=?s]
+                (NP[NUM='sg', PERS=3]
+                  (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                    (Noun[NUM='sg', PERS=3] book)))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3, POSITION=?x]
+            (NP[NUM='sg', PERS=3, POSITION=?x]
+              (NP[NUM='sg', PERS=3]
+                (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+              (Clause[SENTIMENT='pos', TYPE='s']
+                (S[SENTIMENT='pos']
+                  (Coord[TYPE='conj'] and)
+                  (S[MOOD='decl', SENTIMENT='pos']
+                    (NP[POSITION='subject']
+                      (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                        he))
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+                      (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                      (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                        to
+                        (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                          (TV[ARG1='np', TENSE='infinitive'] be)
+                          (NP[NUM='sg', SENTIMENT='pos']
+                            (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                              (TV[SENTIMENT='pos', TENSE='gerund']
+                                (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                                  maturing))
+                              (PP[]
+                                (P[] in)
+                                (NP[NUM='sg', PERS=?p]
+                                  (Det[NUM='sg', SUBCAT='demonstrative']
+                                    this))))))))))))
+            (Clause[SENTIMENT=?s, TYPE='s']
+              (S[SENTIMENT=?s]
+                (NP[NUM='sg', PERS=3]
+                  (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                    (Noun[NUM='sg', PERS=3] book)))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3, POSITION=?x]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Clause[SENTIMENT=?s, TYPE='s']
+              (S[SENTIMENT=?s]
+                (Coord[TYPE='conj'] and)
+                (S[MOOD='decl', SENTIMENT=?s]
+                  (NP[POSITION='subject']
+                    (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                      he))
+                  (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+                    (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                    (Clause[SENTIMENT=?s, TYPE='vp_inf']
+                      to
+                      (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+                        (TV[ARG1='np', TENSE='infinitive'] be)
+                        (NP[NUM='sg', PERS=?p, POSITION=?x]
+                          (NP[NUM='sg', SENTIMENT='pos']
+                            (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                              (TV[SENTIMENT='pos', TENSE='gerund']
+                                (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                                  maturing))
+                              (PP[]
+                                (P[] in)
+                                (S[SENTIMENT=?s]
+                                  (NP[NUM='sg', PERS=?p]
+                                    (Det[NUM='sg', SUBCAT='demonstrative']
+                                      this))))))
+                          (Clause[SENTIMENT=?s, TYPE='s']
+                            (S[SENTIMENT=?s]
+                              (NP[NUM='sg', PERS=3]
+                                (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                  (Noun[NUM='sg', PERS=3] book))))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3, POSITION=?x]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Clause[SENTIMENT=?s, TYPE='s']
+              (S[SENTIMENT=?s]
+                (Coord[TYPE='conj'] and)
+                (S[MOOD='decl', SENTIMENT=?s]
+                  (NP[POSITION='subject']
+                    (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                      he))
+                  (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+                    (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                    (Clause[SENTIMENT=?s, TYPE='vp_inf']
+                      to
+                      (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+                        (TV[ARG1='np', TENSE='infinitive'] be)
+                        (NP[NUM='sg', PERS=?p, POSITION=?x]
+                          (NP[NUM='sg', SENTIMENT='pos']
+                            (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                              (TV[SENTIMENT='pos', TENSE='gerund']
+                                (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                                  maturing))
+                              (PP[]
+                                (P[] in)
+                                (NP[NUM='sg', PERS=?p]
+                                  (Det[NUM='sg', SUBCAT='demonstrative']
+                                    this)))))
+                          (Clause[SENTIMENT=?s, TYPE='s']
+                            (S[SENTIMENT=?s]
+                              (NP[NUM='sg', PERS=3]
+                                (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                  (Noun[NUM='sg', PERS=3] book))))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3, POSITION=?x]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Clause[SENTIMENT='pos', TYPE='s']
+              (S[SENTIMENT='pos']
+                (Coord[TYPE='conj'] and)
+                (S[MOOD='decl', SENTIMENT='pos']
+                  (NP[POSITION='subject']
+                    (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                      he))
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+                    (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                    (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                      to
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                        (TV[ARG1='np', TENSE='infinitive'] be)
+                        (NP[NUM='sg', SENTIMENT='pos']
+                          (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                            (TV[SENTIMENT='pos', TENSE='gerund']
+                              (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                                maturing))
+                            (PP[]
+                              (P[] in)
+                              (S[SENTIMENT=?s]
+                                (NP[NUM='sg', PERS=?p, POSITION=?x]
+                                  (NP[NUM='sg', PERS=?p]
+                                    (Det[NUM='sg', SUBCAT='demonstrative']
+                                      this))
+                                  (Clause[SENTIMENT=?s, TYPE='s']
+                                    (S[SENTIMENT=?s]
+                                      (NP[NUM='sg', PERS=3]
+                                        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                          (Noun[NUM='sg', PERS=3]
+                                            book))))))))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3, POSITION=?x]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Clause[SENTIMENT='pos', TYPE='s']
+              (S[SENTIMENT='pos']
+                (Coord[TYPE='conj'] and)
+                (S[MOOD='decl', SENTIMENT='pos']
+                  (NP[POSITION='subject']
+                    (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                      he))
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+                    (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                    (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                      to
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                        (TV[ARG1='np', TENSE='infinitive'] be)
+                        (NP[NUM='sg', SENTIMENT='pos']
+                          (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                            (TV[SENTIMENT='pos', TENSE='gerund']
+                              (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                                maturing))
+                            (PP[]
+                              (P[] in)
+                              (S[SENTIMENT=?s]
+                                (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                                  (Det[NUM='sg', SUBCAT='demonstrative']
+                                    this)
+                                  (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                    (Noun[NUM='sg', PERS=3] book)))))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3, POSITION=?x]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Clause[SENTIMENT='pos', TYPE='s']
+              (S[SENTIMENT='pos']
+                (Coord[TYPE='conj'] and)
+                (S[MOOD='decl', SENTIMENT='pos']
+                  (NP[POSITION='subject']
+                    (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                      he))
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+                    (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                    (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                      to
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                        (TV[ARG1='np', TENSE='infinitive'] be)
+                        (NP[NUM='sg', SENTIMENT='pos']
+                          (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                            (TV[SENTIMENT='pos', TENSE='gerund']
+                              (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                                maturing))
+                            (PP[]
+                              (P[] in)
+                              (NP[NUM='sg', PERS=?p, POSITION=?x]
+                                (NP[NUM='sg', PERS=?p]
+                                  (Det[NUM='sg', SUBCAT='demonstrative']
+                                    this))
+                                (Clause[SENTIMENT=?s, TYPE='s']
+                                  (S[SENTIMENT=?s]
+                                    (NP[NUM='sg', PERS=3]
+                                      (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                        (Noun[NUM='sg', PERS=3] book)))))))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3, POSITION=?x]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Clause[SENTIMENT='pos', TYPE='s']
+              (S[SENTIMENT='pos']
+                (Coord[TYPE='conj'] and)
+                (S[MOOD='decl', SENTIMENT='pos']
+                  (NP[POSITION='subject']
+                    (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                      he))
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+                    (TV[ARG1='cl', TENSE='simple_past'] seemed)
+                    (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                      to
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                        (TV[ARG1='np', TENSE='infinitive'] be)
+                        (NP[NUM='sg', SENTIMENT='pos']
+                          (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                            (TV[SENTIMENT='pos', TENSE='gerund']
+                              (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                                maturing))
+                            (PP[]
+                              (P[] in)
+                              (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                                (Det[NUM='sg', SUBCAT='demonstrative']
+                                  this)
+                                (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                  (Noun[NUM='sg', PERS=3] book))))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[MOOD='decl', SENTIMENT=?s]
+          (NP[NUM='pl', PERS=3, POSITION='subject']
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Coord[TYPE='conj'] and)
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he)))
+          (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+            (TV[ARG1='cl', TENSE='simple_past'] seemed)
+            (Clause[SENTIMENT=?s, TYPE='vp_inf']
+              to
+              (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+                (TV[ARG1='np', TENSE='infinitive'] be)
+                (NP[NUM='sg', PERS=?p, POSITION=?x]
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (S[SENTIMENT=?s]
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this))))))
+                  (Clause[SENTIMENT=?s, TYPE='s']
+                    (S[SENTIMENT=?s]
+                      (NP[NUM='sg', PERS=3]
+                        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                          (Noun[NUM='sg', PERS=3] book))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[MOOD='decl', SENTIMENT=?s]
+          (NP[NUM='pl', PERS=3, POSITION='subject']
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Coord[TYPE='conj'] and)
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he)))
+          (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+            (TV[ARG1='cl', TENSE='simple_past'] seemed)
+            (Clause[SENTIMENT=?s, TYPE='vp_inf']
+              to
+              (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+                (TV[ARG1='np', TENSE='infinitive'] be)
+                (NP[NUM='sg', PERS=?p, POSITION=?x]
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (NP[NUM='sg', PERS=?p]
+                          (Det[NUM='sg', SUBCAT='demonstrative']
+                            this)))))
+                  (Clause[SENTIMENT=?s, TYPE='s']
+                    (S[SENTIMENT=?s]
+                      (NP[NUM='sg', PERS=3]
+                        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                          (Noun[NUM='sg', PERS=3] book))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[MOOD='decl', SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3, POSITION=?x]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Clause[SENTIMENT=?s, TYPE='s']
+              (S[SENTIMENT=?s]
+                (Coord[TYPE='conj'] and)
+                (S[SENTIMENT=?s]
+                  (NP[POSITION='subject']
+                    (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                      he))))))
+          (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+            (TV[ARG1='cl', TENSE='simple_past'] seemed)
+            (Clause[SENTIMENT=?s, TYPE='vp_inf']
+              to
+              (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+                (TV[ARG1='np', TENSE='infinitive'] be)
+                (NP[NUM='sg', PERS=?p, POSITION=?x]
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (S[SENTIMENT=?s]
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this))))))
+                  (Clause[SENTIMENT=?s, TYPE='s']
+                    (S[SENTIMENT=?s]
+                      (NP[NUM='sg', PERS=3]
+                        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                          (Noun[NUM='sg', PERS=3] book))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[MOOD='decl', SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3, POSITION=?x]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Clause[SENTIMENT=?s, TYPE='s']
+              (S[SENTIMENT=?s]
+                (Coord[TYPE='conj'] and)
+                (S[SENTIMENT=?s]
+                  (NP[POSITION='subject']
+                    (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                      he))))))
+          (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+            (TV[ARG1='cl', TENSE='simple_past'] seemed)
+            (Clause[SENTIMENT=?s, TYPE='vp_inf']
+              to
+              (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+                (TV[ARG1='np', TENSE='infinitive'] be)
+                (NP[NUM='sg', PERS=?p, POSITION=?x]
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (NP[NUM='sg', PERS=?p]
+                          (Det[NUM='sg', SUBCAT='demonstrative']
+                            this)))))
+                  (Clause[SENTIMENT=?s, TYPE='s']
+                    (S[SENTIMENT=?s]
+                      (NP[NUM='sg', PERS=3]
+                        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                          (Noun[NUM='sg', PERS=3] book))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))
+          (Coord[TYPE='conj'] and)
+          (S[MOOD='decl', SENTIMENT=?s]
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT=?s, TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', PERS=?p, POSITION=?x]
+                    (NP[NUM='sg', SENTIMENT='pos']
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                        (TV[SENTIMENT='pos', TENSE='gerund']
+                          (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                            maturing))
+                        (PP[]
+                          (P[] in)
+                          (S[SENTIMENT=?s]
+                            (NP[NUM='sg', PERS=?p]
+                              (Det[NUM='sg', SUBCAT='demonstrative']
+                                this))))))
+                    (Clause[SENTIMENT=?s, TYPE='s']
+                      (S[SENTIMENT=?s]
+                        (NP[NUM='sg', PERS=3]
+                          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Noun[NUM='sg', PERS=3] book)))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))
+          (Coord[TYPE='conj'] and)
+          (S[MOOD='decl', SENTIMENT=?s]
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT=?s, TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', PERS=?p, POSITION=?x]
+                    (NP[NUM='sg', SENTIMENT='pos']
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                        (TV[SENTIMENT='pos', TENSE='gerund']
+                          (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                            maturing))
+                        (PP[]
+                          (P[] in)
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this)))))
+                    (Clause[SENTIMENT=?s, TYPE='s']
+                      (S[SENTIMENT=?s]
+                        (NP[NUM='sg', PERS=3]
+                          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Noun[NUM='sg', PERS=3] book)))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))))
+        (Coord[TYPE='conj'] and)
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[MOOD='decl', SENTIMENT=?s]
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT=?s, TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', PERS=?p, POSITION=?x]
+                    (NP[NUM='sg', SENTIMENT='pos']
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                        (TV[SENTIMENT='pos', TENSE='gerund']
+                          (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                            maturing))
+                        (PP[]
+                          (P[] in)
+                          (S[SENTIMENT=?s]
+                            (NP[NUM='sg', PERS=?p]
+                              (Det[NUM='sg', SUBCAT='demonstrative']
+                                this))))))
+                    (Clause[SENTIMENT=?s, TYPE='s']
+                      (S[SENTIMENT=?s]
+                        (NP[NUM='sg', PERS=3]
+                          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Noun[NUM='sg', PERS=3] book)))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))))
+        (Coord[TYPE='conj'] and)
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[MOOD='decl', SENTIMENT=?s]
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT=?s, TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', PERS=?p, POSITION=?x]
+                    (NP[NUM='sg', SENTIMENT='pos']
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                        (TV[SENTIMENT='pos', TENSE='gerund']
+                          (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                            maturing))
+                        (PP[]
+                          (P[] in)
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this)))))
+                    (Clause[SENTIMENT=?s, TYPE='s']
+                      (S[SENTIMENT=?s]
+                        (NP[NUM='sg', PERS=3]
+                          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Noun[NUM='sg', PERS=3] book)))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (Coord[TYPE='conj'] and)
+          (S[MOOD='decl', SENTIMENT=?s]
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT=?s, TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', PERS=?p, POSITION=?x]
+                    (NP[NUM='sg', SENTIMENT='pos']
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                        (TV[SENTIMENT='pos', TENSE='gerund']
+                          (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                            maturing))
+                        (PP[]
+                          (P[] in)
+                          (S[SENTIMENT=?s]
+                            (NP[NUM='sg', PERS=?p]
+                              (Det[NUM='sg', SUBCAT='demonstrative']
+                                this))))))
+                    (Clause[SENTIMENT=?s, TYPE='s']
+                      (S[SENTIMENT=?s]
+                        (NP[NUM='sg', PERS=3]
+                          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Noun[NUM='sg', PERS=3] book)))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (Coord[TYPE='conj'] and)
+          (S[MOOD='decl', SENTIMENT=?s]
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT=?s, TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', PERS=?p, POSITION=?x]
+                    (NP[NUM='sg', SENTIMENT='pos']
+                      (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                        (TV[SENTIMENT='pos', TENSE='gerund']
+                          (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                            maturing))
+                        (PP[]
+                          (P[] in)
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this)))))
+                    (Clause[SENTIMENT=?s, TYPE='s']
+                      (S[SENTIMENT=?s]
+                        (NP[NUM='sg', PERS=3]
+                          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Noun[NUM='sg', PERS=3] book)))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='pl', PERS=3, POSITION='subject']
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Coord[TYPE='conj'] and)
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he)))
+          (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+            (TV[ARG1='cl', TENSE='simple_past'] seemed)
+            (Clause[SENTIMENT='pos', TYPE='vp_inf']
+              to
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                (TV[ARG1='np', TENSE='infinitive'] be)
+                (NP[NUM='sg', SENTIMENT='pos']
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                    (TV[SENTIMENT='pos', TENSE='gerund']
+                      (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                        maturing))
+                    (PP[]
+                      (P[] in)
+                      (S[SENTIMENT=?s]
+                        (NP[NUM='sg', PERS=?p, POSITION=?x]
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this))
+                          (Clause[SENTIMENT=?s, TYPE='s']
+                            (S[SENTIMENT=?s]
+                              (NP[NUM='sg', PERS=3]
+                                (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                  (Noun[NUM='sg', PERS=3] book))))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='pl', PERS=3, POSITION='subject']
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Coord[TYPE='conj'] and)
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he)))
+          (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+            (TV[ARG1='cl', TENSE='simple_past'] seemed)
+            (Clause[SENTIMENT='pos', TYPE='vp_inf']
+              to
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                (TV[ARG1='np', TENSE='infinitive'] be)
+                (NP[NUM='sg', SENTIMENT='pos']
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                    (TV[SENTIMENT='pos', TENSE='gerund']
+                      (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                        maturing))
+                    (PP[]
+                      (P[] in)
+                      (S[SENTIMENT=?s]
+                        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                          (Det[NUM='sg', SUBCAT='demonstrative']
+                            this)
+                          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Noun[NUM='sg', PERS=3] book)))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='pl', PERS=3, POSITION='subject']
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Coord[TYPE='conj'] and)
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he)))
+          (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+            (TV[ARG1='cl', TENSE='simple_past'] seemed)
+            (Clause[SENTIMENT='pos', TYPE='vp_inf']
+              to
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                (TV[ARG1='np', TENSE='infinitive'] be)
+                (NP[NUM='sg', SENTIMENT='pos']
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                    (TV[SENTIMENT='pos', TENSE='gerund']
+                      (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                        maturing))
+                    (PP[]
+                      (P[] in)
+                      (NP[NUM='sg', PERS=?p, POSITION=?x]
+                        (NP[NUM='sg', PERS=?p]
+                          (Det[NUM='sg', SUBCAT='demonstrative']
+                            this))
+                        (Clause[SENTIMENT=?s, TYPE='s']
+                          (S[SENTIMENT=?s]
+                            (NP[NUM='sg', PERS=3]
+                              (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                (Noun[NUM='sg', PERS=3] book)))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='pl', PERS=3, POSITION='subject']
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Coord[TYPE='conj'] and)
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he)))
+          (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+            (TV[ARG1='cl', TENSE='simple_past'] seemed)
+            (Clause[SENTIMENT='pos', TYPE='vp_inf']
+              to
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                (TV[ARG1='np', TENSE='infinitive'] be)
+                (NP[NUM='sg', SENTIMENT='pos']
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                    (TV[SENTIMENT='pos', TENSE='gerund']
+                      (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                        maturing))
+                    (PP[]
+                      (P[] in)
+                      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                        (Det[NUM='sg', SUBCAT='demonstrative'] this)
+                        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                          (Noun[NUM='sg', PERS=3] book))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='sg', PERS=3, POSITION=?x]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Clause[SENTIMENT=?s, TYPE='s']
+              (S[SENTIMENT=?s]
+                (Coord[TYPE='conj'] and)
+                (S[SENTIMENT=?s]
+                  (NP[POSITION='subject']
+                    (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                      he))))))
+          (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+            (TV[ARG1='cl', TENSE='simple_past'] seemed)
+            (Clause[SENTIMENT='pos', TYPE='vp_inf']
+              to
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                (TV[ARG1='np', TENSE='infinitive'] be)
+                (NP[NUM='sg', SENTIMENT='pos']
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                    (TV[SENTIMENT='pos', TENSE='gerund']
+                      (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                        maturing))
+                    (PP[]
+                      (P[] in)
+                      (S[SENTIMENT=?s]
+                        (NP[NUM='sg', PERS=?p, POSITION=?x]
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this))
+                          (Clause[SENTIMENT=?s, TYPE='s']
+                            (S[SENTIMENT=?s]
+                              (NP[NUM='sg', PERS=3]
+                                (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                  (Noun[NUM='sg', PERS=3] book))))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='sg', PERS=3, POSITION=?x]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Clause[SENTIMENT=?s, TYPE='s']
+              (S[SENTIMENT=?s]
+                (Coord[TYPE='conj'] and)
+                (S[SENTIMENT=?s]
+                  (NP[POSITION='subject']
+                    (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                      he))))))
+          (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+            (TV[ARG1='cl', TENSE='simple_past'] seemed)
+            (Clause[SENTIMENT='pos', TYPE='vp_inf']
+              to
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                (TV[ARG1='np', TENSE='infinitive'] be)
+                (NP[NUM='sg', SENTIMENT='pos']
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                    (TV[SENTIMENT='pos', TENSE='gerund']
+                      (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                        maturing))
+                    (PP[]
+                      (P[] in)
+                      (S[SENTIMENT=?s]
+                        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                          (Det[NUM='sg', SUBCAT='demonstrative']
+                            this)
+                          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Noun[NUM='sg', PERS=3] book)))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='sg', PERS=3, POSITION=?x]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Clause[SENTIMENT=?s, TYPE='s']
+              (S[SENTIMENT=?s]
+                (Coord[TYPE='conj'] and)
+                (S[SENTIMENT=?s]
+                  (NP[POSITION='subject']
+                    (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                      he))))))
+          (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+            (TV[ARG1='cl', TENSE='simple_past'] seemed)
+            (Clause[SENTIMENT='pos', TYPE='vp_inf']
+              to
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                (TV[ARG1='np', TENSE='infinitive'] be)
+                (NP[NUM='sg', SENTIMENT='pos']
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                    (TV[SENTIMENT='pos', TENSE='gerund']
+                      (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                        maturing))
+                    (PP[]
+                      (P[] in)
+                      (NP[NUM='sg', PERS=?p, POSITION=?x]
+                        (NP[NUM='sg', PERS=?p]
+                          (Det[NUM='sg', SUBCAT='demonstrative']
+                            this))
+                        (Clause[SENTIMENT=?s, TYPE='s']
+                          (S[SENTIMENT=?s]
+                            (NP[NUM='sg', PERS=3]
+                              (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                (Noun[NUM='sg', PERS=3] book)))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='sg', PERS=3, POSITION=?x]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))
+            (Clause[SENTIMENT=?s, TYPE='s']
+              (S[SENTIMENT=?s]
+                (Coord[TYPE='conj'] and)
+                (S[SENTIMENT=?s]
+                  (NP[POSITION='subject']
+                    (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj']
+                      he))))))
+          (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+            (TV[ARG1='cl', TENSE='simple_past'] seemed)
+            (Clause[SENTIMENT='pos', TYPE='vp_inf']
+              to
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                (TV[ARG1='np', TENSE='infinitive'] be)
+                (NP[NUM='sg', SENTIMENT='pos']
+                  (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                    (TV[SENTIMENT='pos', TENSE='gerund']
+                      (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                        maturing))
+                    (PP[]
+                      (P[] in)
+                      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                        (Det[NUM='sg', SUBCAT='demonstrative'] this)
+                        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                          (Noun[NUM='sg', PERS=3] book))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[SENTIMENT='pos']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))
+          (Coord[TYPE='conj'] and)
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (S[SENTIMENT=?s]
+                          (NP[NUM='sg', PERS=?p, POSITION=?x]
+                            (NP[NUM='sg', PERS=?p]
+                              (Det[NUM='sg', SUBCAT='demonstrative']
+                                this))
+                            (Clause[SENTIMENT=?s, TYPE='s']
+                              (S[SENTIMENT=?s]
+                                (NP[NUM='sg', PERS=3]
+                                  (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                    (Noun[NUM='sg', PERS=3] book)))))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[SENTIMENT='pos']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))
+          (Coord[TYPE='conj'] and)
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (S[SENTIMENT=?s]
+                          (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this)
+                            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                              (Noun[NUM='sg', PERS=3] book))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[SENTIMENT='pos']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))
+          (Coord[TYPE='conj'] and)
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (NP[NUM='sg', PERS=?p, POSITION=?x]
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this))
+                          (Clause[SENTIMENT=?s, TYPE='s']
+                            (S[SENTIMENT=?s]
+                              (NP[NUM='sg', PERS=3]
+                                (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                  (Noun[NUM='sg', PERS=3] book))))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[SENTIMENT='pos']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))
+          (Coord[TYPE='conj'] and)
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                          (Det[NUM='sg', SUBCAT='demonstrative']
+                            this)
+                          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Noun[NUM='sg', PERS=3] book)))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))))
+        (Coord[TYPE='conj'] and)
+        (Clause[SENTIMENT='pos', TYPE='s']
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (S[SENTIMENT=?s]
+                          (NP[NUM='sg', PERS=?p, POSITION=?x]
+                            (NP[NUM='sg', PERS=?p]
+                              (Det[NUM='sg', SUBCAT='demonstrative']
+                                this))
+                            (Clause[SENTIMENT=?s, TYPE='s']
+                              (S[SENTIMENT=?s]
+                                (NP[NUM='sg', PERS=3]
+                                  (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                    (Noun[NUM='sg', PERS=3] book)))))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))))
+        (Coord[TYPE='conj'] and)
+        (Clause[SENTIMENT='pos', TYPE='s']
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (S[SENTIMENT=?s]
+                          (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this)
+                            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                              (Noun[NUM='sg', PERS=3] book))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))))
+        (Coord[TYPE='conj'] and)
+        (Clause[SENTIMENT='pos', TYPE='s']
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (NP[NUM='sg', PERS=?p, POSITION=?x]
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this))
+                          (Clause[SENTIMENT=?s, TYPE='s']
+                            (S[SENTIMENT=?s]
+                              (NP[NUM='sg', PERS=3]
+                                (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                  (Noun[NUM='sg', PERS=3] book))))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='article'] the)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] character)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon))))
+        (Coord[TYPE='conj'] and)
+        (Clause[SENTIMENT='pos', TYPE='s']
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                          (Det[NUM='sg', SUBCAT='demonstrative']
+                            this)
+                          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Noun[NUM='sg', PERS=3] book)))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[SENTIMENT='pos']
+          (Coord[TYPE='conj'] and)
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (S[SENTIMENT=?s]
+                          (NP[NUM='sg', PERS=?p, POSITION=?x]
+                            (NP[NUM='sg', PERS=?p]
+                              (Det[NUM='sg', SUBCAT='demonstrative']
+                                this))
+                            (Clause[SENTIMENT=?s, TYPE='s']
+                              (S[SENTIMENT=?s]
+                                (NP[NUM='sg', PERS=3]
+                                  (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                    (Noun[NUM='sg', PERS=3] book)))))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[SENTIMENT='pos']
+          (Coord[TYPE='conj'] and)
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (S[SENTIMENT=?s]
+                          (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this)
+                            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                              (Noun[NUM='sg', PERS=3] book))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[SENTIMENT='pos']
+          (Coord[TYPE='conj'] and)
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (NP[NUM='sg', PERS=?p, POSITION=?x]
+                          (NP[NUM='sg', PERS=?p]
+                            (Det[NUM='sg', SUBCAT='demonstrative']
+                              this))
+                          (Clause[SENTIMENT=?s, TYPE='s']
+                            (S[SENTIMENT=?s]
+                              (NP[NUM='sg', PERS=3]
+                                (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                                  (Noun[NUM='sg', PERS=3] book))))))))))))))))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      like)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[SENTIMENT='pos']
+          (Coord[TYPE='conj'] and)
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[POSITION='subject']
+              (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+              (TV[ARG1='cl', TENSE='simple_past'] seemed)
+              (Clause[SENTIMENT='pos', TYPE='vp_inf']
+                to
+                (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+                  (TV[ARG1='np', TENSE='infinitive'] be)
+                  (NP[NUM='sg', SENTIMENT='pos']
+                    (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                      (TV[SENTIMENT='pos', TENSE='gerund']
+                        (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                          maturing))
+                      (PP[]
+                        (P[] in)
+                        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                          (Det[NUM='sg', SUBCAT='demonstrative']
+                            this)
+                          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Noun[NUM='sg', PERS=3] book)))))))))))))))
+
+(S[SENTIMENT='pos']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+        like)
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))))))
+  (Coord[TYPE='conj'] and)
+  (S[MOOD='decl', SENTIMENT=?s]
+    (NP[POSITION='subject']
+      (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+    (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+      (TV[ARG1='cl', TENSE='simple_past'] seemed)
+      (Clause[SENTIMENT=?s, TYPE='vp_inf']
+        to
+        (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+          (TV[ARG1='np', TENSE='infinitive'] be)
+          (NP[NUM='sg', PERS=?p, POSITION=?x]
+            (NP[NUM='sg', SENTIMENT='pos']
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                (TV[SENTIMENT='pos', TENSE='gerund']
+                  (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                    maturing))
+                (PP[]
+                  (P[] in)
+                  (S[SENTIMENT=?s]
+                    (NP[NUM='sg', PERS=?p]
+                      (Det[NUM='sg', SUBCAT='demonstrative'] this))))))
+            (Clause[SENTIMENT=?s, TYPE='s']
+              (S[SENTIMENT=?s]
+                (NP[NUM='sg', PERS=3]
+                  (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                    (Noun[NUM='sg', PERS=3] book)))))))))))
+
+(S[SENTIMENT='pos']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+        like)
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))))))
+  (Coord[TYPE='conj'] and)
+  (S[MOOD='decl', SENTIMENT=?s]
+    (NP[POSITION='subject']
+      (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+    (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_past']
+      (TV[ARG1='cl', TENSE='simple_past'] seemed)
+      (Clause[SENTIMENT=?s, TYPE='vp_inf']
+        to
+        (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+          (TV[ARG1='np', TENSE='infinitive'] be)
+          (NP[NUM='sg', PERS=?p, POSITION=?x]
+            (NP[NUM='sg', SENTIMENT='pos']
+              (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+                (TV[SENTIMENT='pos', TENSE='gerund']
+                  (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                    maturing))
+                (PP[]
+                  (P[] in)
+                  (NP[NUM='sg', PERS=?p]
+                    (Det[NUM='sg', SUBCAT='demonstrative'] this)))))
+            (Clause[SENTIMENT=?s, TYPE='s']
+              (S[SENTIMENT=?s]
+                (NP[NUM='sg', PERS=3]
+                  (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                    (Noun[NUM='sg', PERS=3] book)))))))))))
+
+(S[SENTIMENT='pos']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+        like)
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))))))
+  (Coord[TYPE='conj'] and)
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject']
+      (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+    (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+      (TV[ARG1='cl', TENSE='simple_past'] seemed)
+      (Clause[SENTIMENT='pos', TYPE='vp_inf']
+        to
+        (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+          (TV[ARG1='np', TENSE='infinitive'] be)
+          (NP[NUM='sg', SENTIMENT='pos']
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+              (TV[SENTIMENT='pos', TENSE='gerund']
+                (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                  maturing))
+              (PP[]
+                (P[] in)
+                (S[SENTIMENT=?s]
+                  (NP[NUM='sg', PERS=?p, POSITION=?x]
+                    (NP[NUM='sg', PERS=?p]
+                      (Det[NUM='sg', SUBCAT='demonstrative'] this))
+                    (Clause[SENTIMENT=?s, TYPE='s']
+                      (S[SENTIMENT=?s]
+                        (NP[NUM='sg', PERS=3]
+                          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                            (Noun[NUM='sg', PERS=3] book)))))))))))))))
+
+(S[SENTIMENT='pos']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+        like)
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))))))
+  (Coord[TYPE='conj'] and)
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject']
+      (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+    (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+      (TV[ARG1='cl', TENSE='simple_past'] seemed)
+      (Clause[SENTIMENT='pos', TYPE='vp_inf']
+        to
+        (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+          (TV[ARG1='np', TENSE='infinitive'] be)
+          (NP[NUM='sg', SENTIMENT='pos']
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+              (TV[SENTIMENT='pos', TENSE='gerund']
+                (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                  maturing))
+              (PP[]
+                (P[] in)
+                (S[SENTIMENT=?s]
+                  (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                    (Det[NUM='sg', SUBCAT='demonstrative'] this)
+                    (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                      (Noun[NUM='sg', PERS=3] book))))))))))))
+
+(S[SENTIMENT='pos']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+        like)
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))))))
+  (Coord[TYPE='conj'] and)
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject']
+      (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+    (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+      (TV[ARG1='cl', TENSE='simple_past'] seemed)
+      (Clause[SENTIMENT='pos', TYPE='vp_inf']
+        to
+        (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+          (TV[ARG1='np', TENSE='infinitive'] be)
+          (NP[NUM='sg', SENTIMENT='pos']
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+              (TV[SENTIMENT='pos', TENSE='gerund']
+                (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                  maturing))
+              (PP[]
+                (P[] in)
+                (NP[NUM='sg', PERS=?p, POSITION=?x]
+                  (NP[NUM='sg', PERS=?p]
+                    (Det[NUM='sg', SUBCAT='demonstrative'] this))
+                  (Clause[SENTIMENT=?s, TYPE='s']
+                    (S[SENTIMENT=?s]
+                      (NP[NUM='sg', PERS=3]
+                        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                          (Noun[NUM='sg', PERS=3] book))))))))))))))
+
+(S[SENTIMENT='pos']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+        like)
+      (NP[NUM='sg', PERS=3, POSITION=?x]
+        (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+          (Det[SUBCAT='article'] the)
+          (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='sg', PERS=3] character)))
+        (Clause[SENTIMENT=?s, TYPE='s']
+          (S[SENTIMENT=?s]
+            (NP[NUM='sg', PERS=3]
+              (ProperNoun[NEED_DET=0, NUM='sg'] Eragon)))))))
+  (Coord[TYPE='conj'] and)
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject']
+      (ProN[GEN='masc', NUM='sg', PERS=3, TYPE='subj'] he))
+    (VP[NUM=?n, SENTIMENT='pos', TENSE='simple_past']
+      (TV[ARG1='cl', TENSE='simple_past'] seemed)
+      (Clause[SENTIMENT='pos', TYPE='vp_inf']
+        to
+        (VP[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+          (TV[ARG1='np', TENSE='infinitive'] be)
+          (NP[NUM='sg', SENTIMENT='pos']
+            (VP[NUM=?n, SENTIMENT='pos', TENSE='gerund']
+              (TV[SENTIMENT='pos', TENSE='gerund']
+                (TVBar[ARG1='pp', SENTIMENT='pos', TENSE='pres_participle']
+                  maturing))
+              (PP[]
+                (P[] in)
+                (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                  (Det[NUM='sg', SUBCAT='demonstrative'] this)
+                  (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                    (Noun[NUM='sg', PERS=3] book)))))))))))
+
+---------------------------------------
+Sentece 20: I love their cd and I love them.
+Num of trees: 2
+(S[SENTIMENT='pos']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+        love)
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='possessive'] their)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] cd)))))
+  (Coord[TYPE='conj'] and)
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+        love)
+      (NP[POSITION='object']
+        (ProN[NUM='pl', PERS=3, TYPE='obj'] them)))))
+
+(S[MOOD='decl', SENTIMENT='pos']
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+    (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      love)
+    (NP[NUM='sg', PERS=3, POSITION=?x]
+      (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+        (Det[SUBCAT='possessive'] their)
+        (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[NUM='sg', PERS=3] cd)))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[SENTIMENT='pos']
+          (Coord[TYPE='conj'] and)
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[POSITION='subject']
+              (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+            (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+              (TV[ARG1='np', NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+                love)
+              (NP[POSITION='object']
+                (ProN[NUM='pl', PERS=3, TYPE='obj'] them)))))))))
+
+---------------------------------------
+Sentece 21: They are cute and they can sing and dance.
+Num of trees: 6
+(S[SENTIMENT='pos']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject']
+      (ProN[NUM='pl', PERS=3, TYPE='subj'] they))
+    (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+      (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] cute))))
+  (Coord[TYPE='conj'] and)
+  (S[MOOD='decl', SENTIMENT=?s]
+    (NP[POSITION='subject']
+      (ProN[NUM='pl', PERS=3, TYPE='subj'] they))
+    (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_pres']
+      (TV[ARG1='cl', TENSE='simple_pres'] (Modal[FORM='can'] can))
+      (Clause[SENTIMENT=?s, TYPE='vp_inf']
+        (Clause[SENTIMENT=?s, TYPE='vp_inf']
+          (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+            (IV[TENSE='infinitive'] sing)))
+        (Coord[TYPE='conj'] and)
+        (Clause[SENTIMENT=?s, TYPE='vp_inf']
+          (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+            (IV[TENSE='infinitive'] dance)))))))
+
+(S[SENTIMENT='pos']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject']
+      (ProN[NUM='pl', PERS=3, TYPE='subj'] they))
+    (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+      (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] cute))))
+  (Coord[TYPE='conj'] and)
+  (S[MOOD='decl', SENTIMENT=?s]
+    (NP[POSITION='subject']
+      (ProN[NUM='pl', PERS=3, TYPE='subj'] they))
+    (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_pres']
+      (TV[ARG1='cl', TENSE='simple_pres'] (Modal[FORM='can'] can))
+      (Clause[SENTIMENT=?s, TYPE='vp_inf']
+        (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+          (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+            (IV[TENSE='infinitive'] sing))
+          (Coord[TYPE='conj'] and)
+          (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+            (IV[TENSE='infinitive'] dance)))))))
+
+(S[SENTIMENT='pos']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject']
+      (ProN[NUM='pl', PERS=3, TYPE='subj'] they))
+    (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+      (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] cute))))
+  (Coord[TYPE='conj'] and)
+  (S[MOOD='decl', SENTIMENT=?s]
+    (NP[POSITION='subject']
+      (ProN[NUM='pl', PERS=3, TYPE='subj'] they))
+    (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_pres']
+      (TV[ARG1='cl', TENSE='simple_pres'] (Modal[FORM='can'] can))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (S[MOOD='imper']
+            (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+              (IV[TENSE='infinitive'] sing)))
+          (Coord[TYPE='conj'] and)
+          (S[MOOD='imper']
+            (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+              (IV[TENSE='infinitive'] dance))))))))
+
+(S[SENTIMENT='pos']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject']
+      (ProN[NUM='pl', PERS=3, TYPE='subj'] they))
+    (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+      (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] cute))))
+  (Coord[TYPE='conj'] and)
+  (S[MOOD='decl', SENTIMENT=?s]
+    (NP[POSITION='subject']
+      (ProN[NUM='pl', PERS=3, TYPE='subj'] they))
+    (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+      (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_pres']
+        (TV[ARG1='cl', TENSE='simple_pres'] (Modal[FORM='can'] can))
+        (Clause[SENTIMENT=?s, TYPE='vp_inf']
+          (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+            (IV[TENSE='infinitive'] sing))))
+      (Coord[TYPE='conj'] and)
+      (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+        (IV[TENSE='infinitive'] dance)))))
+
+(S[SENTIMENT='pos']
+  (S[SENTIMENT='pos']
+    (S[MOOD='decl', SENTIMENT='pos']
+      (NP[POSITION='subject']
+        (ProN[NUM='pl', PERS=3, TYPE='subj'] they))
+      (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+        (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+        (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] cute))))
+    (Coord[TYPE='conj'] and)
+    (S[MOOD='decl', SENTIMENT=?s]
+      (NP[POSITION='subject']
+        (ProN[NUM='pl', PERS=3, TYPE='subj'] they))
+      (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_pres']
+        (TV[ARG1='cl', TENSE='simple_pres'] (Modal[FORM='can'] can))
+        (Clause[SENTIMENT=?s, TYPE='vp_inf']
+          (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+            (IV[TENSE='infinitive'] sing))))))
+  (Coord[TYPE='conj'] and)
+  (S[MOOD='imper']
+    (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+      (IV[TENSE='infinitive'] dance))))
+
+(S[SENTIMENT='pos']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[POSITION='subject']
+      (ProN[NUM='pl', PERS=3, TYPE='subj'] they))
+    (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+      (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] cute))))
+  (Coord[TYPE='conj'] and)
+  (S[SENTIMENT=?s]
+    (S[MOOD='decl', SENTIMENT=?s]
+      (NP[POSITION='subject']
+        (ProN[NUM='pl', PERS=3, TYPE='subj'] they))
+      (VP[NUM=?n, SENTIMENT=?s, TENSE='simple_pres']
+        (TV[ARG1='cl', TENSE='simple_pres'] (Modal[FORM='can'] can))
+        (Clause[SENTIMENT=?s, TYPE='vp_inf']
+          (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+            (IV[TENSE='infinitive'] sing)))))
+    (Coord[TYPE='conj'] and)
+    (S[MOOD='imper']
+      (VP[NUM=?n, SENTIMENT=?s, TENSE='infinitive']
+        (IV[TENSE='infinitive'] dance)))))
+
+---------------------------------------
+Sentece 22: Her voice is silky and direct, and her lyrics are smart and direct.
+Num of trees: 7
+(S[SENTIMENT='pos']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+      (Det[SUBCAT='possessive'] her)
+      (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='sg', PERS=3] voice)))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='adj', NUM='sg', TENSE='simple_pres'] is)
+      (AdjP[SENTIMENT='pos']
+        (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] silky))
+        (Coord[TYPE='conj'] and)
+        (AdjP[SENTIMENT=?s] (Adj[] direct)))))
+  ,
+  (Coord[TYPE='conj'] and)
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[NUM='pl', PERS=3, SENTIMENT=?s]
+      (Det[SUBCAT='possessive'] her)
+      (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='pl', PERS=3] lyrics)))
+    (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+      (AdjP[SENTIMENT='pos']
+        (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] smart))
+        (Coord[TYPE='conj'] and)
+        (AdjP[SENTIMENT=?s] (Adj[] direct))))))
+
+(S[SENTIMENT='pos']
+  (S[SENTIMENT=?s]
+    (NP[NUM=?n, PERS=?p, POSITION='object']
+      (NP[POSITION='object']
+        (ProN[GEN='fem', NUM='sg', PERS=3, TYPE='obj'] her))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] voice)))
+          (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+            (TV[ARG1='adj', NUM='sg', TENSE='simple_pres'] is)
+            (AdjP[SENTIMENT='pos']
+              (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] silky))
+              (Coord[TYPE='conj'] and)
+              (AdjP[SENTIMENT=?s] (Adj[] direct))))))))
+  ,
+  (Coord[TYPE='conj'] and)
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[NUM='pl', PERS=3, SENTIMENT=?s]
+      (Det[SUBCAT='possessive'] her)
+      (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='pl', PERS=3] lyrics)))
+    (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+      (AdjP[SENTIMENT='pos']
+        (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] smart))
+        (Coord[TYPE='conj'] and)
+        (AdjP[SENTIMENT=?s] (Adj[] direct))))))
+
+(S[SENTIMENT='pos']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+      (Det[SUBCAT='possessive'] her)
+      (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='sg', PERS=3] voice)))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='adj', NUM='sg', TENSE='simple_pres'] is)
+      (AdjP[SENTIMENT='pos']
+        (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] silky))
+        (Coord[TYPE='conj'] and)
+        (AdjP[SENTIMENT=?s] (Adj[] direct)))))
+  ,
+  (Coord[TYPE='conj'] and)
+  (S[SENTIMENT=?s]
+    (NP[NUM=?n, PERS=?p, POSITION='object']
+      (NP[POSITION='object']
+        (ProN[GEN='fem', NUM='sg', PERS=3, TYPE='obj'] her))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='pl', PERS=3]
+            (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='pl', PERS=3] lyrics)))
+          (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+            (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+            (AdjP[SENTIMENT='pos']
+              (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] smart))
+              (Coord[TYPE='conj'] and)
+              (AdjP[SENTIMENT=?s] (Adj[] direct)))))))))
+
+(S[SENTIMENT=?s]
+  (NP[NUM=?n, PERS=?p, POSITION='object']
+    (NP[POSITION='object']
+      (ProN[GEN='fem', NUM='sg', PERS=3, TYPE='obj'] her))
+    (Clause[SENTIMENT='pos', TYPE='s']
+      (S[SENTIMENT='pos']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] voice)))
+          (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+            (TV[ARG1='adj', NUM='sg', TENSE='simple_pres'] is)
+            (AdjP[SENTIMENT='pos']
+              (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] silky))
+              (Coord[TYPE='conj'] and)
+              (AdjP[SENTIMENT=?s] (Adj[] direct)))))
+        ,
+        (Coord[TYPE='conj'] and)
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='pl', PERS=3, SENTIMENT=?s]
+            (Det[SUBCAT='possessive'] her)
+            (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='pl', PERS=3] lyrics)))
+          (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+            (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+            (AdjP[SENTIMENT='pos']
+              (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] smart))
+              (Coord[TYPE='conj'] and)
+              (AdjP[SENTIMENT=?s] (Adj[] direct)))))))))
+
+(S[SENTIMENT=?s]
+  (NP[NUM=?n, PERS=?p, POSITION='object']
+    (NP[POSITION='object']
+      (ProN[GEN='fem', NUM='sg', PERS=3, TYPE='obj'] her))
+    (Clause[SENTIMENT='pos', TYPE='s']
+      (S[SENTIMENT='pos']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] voice)))
+          (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+            (TV[ARG1='adj', NUM='sg', TENSE='simple_pres'] is)
+            (AdjP[SENTIMENT='pos']
+              (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] silky))
+              (Coord[TYPE='conj'] and)
+              (AdjP[SENTIMENT=?s] (Adj[] direct)))))
+        ,
+        (Coord[TYPE='conj'] and)
+        (S[SENTIMENT=?s]
+          (NP[NUM=?n, PERS=?p, POSITION='object']
+            (NP[POSITION='object']
+              (ProN[GEN='fem', NUM='sg', PERS=3, TYPE='obj'] her))
+            (Clause[SENTIMENT='pos', TYPE='s']
+              (S[MOOD='decl', SENTIMENT='pos']
+                (NP[NUM='pl', PERS=3]
+                  (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+                    (Noun[NUM='pl', PERS=3] lyrics)))
+                (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+                  (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+                  (AdjP[SENTIMENT='pos']
+                    (AdjP[SENTIMENT='pos']
+                      (Adj[SENTIMENT='pos'] smart))
+                    (Coord[TYPE='conj'] and)
+                    (AdjP[SENTIMENT=?s] (Adj[] direct))))))))))))
+
+(S[SENTIMENT=?s]
+  (NP[NUM=?n, PERS=?p, POSITION='object']
+    (NP[NUM=?n, PERS=?p, POSITION='object']
+      (NP[POSITION='object']
+        (ProN[GEN='fem', NUM='sg', PERS=3, TYPE='obj'] her))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[SENTIMENT='pos']
+          (S[MOOD='decl', SENTIMENT='pos']
+            (NP[NUM='sg', PERS=3]
+              (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+                (Noun[NUM='sg', PERS=3] voice)))
+            (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+              (TV[ARG1='adj', NUM='sg', TENSE='simple_pres'] is)
+              (AdjP[SENTIMENT='pos']
+                (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] silky))
+                (Coord[TYPE='conj'] and)
+                (AdjP[SENTIMENT=?s] (Adj[] direct)))))
+          ,
+          (Coord[TYPE='conj'] and)
+          (S[SENTIMENT=?s]
+            (NP[POSITION='object']
+              (ProN[GEN='fem', NUM='sg', PERS=3, TYPE='obj'] her))))))
+    (Clause[SENTIMENT='pos', TYPE='s']
+      (S[MOOD='decl', SENTIMENT='pos']
+        (NP[NUM='pl', PERS=3]
+          (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+            (Noun[NUM='pl', PERS=3] lyrics)))
+        (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+          (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+          (AdjP[SENTIMENT='pos']
+            (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] smart))
+            (Coord[TYPE='conj'] and)
+            (AdjP[SENTIMENT=?s] (Adj[] direct))))))))
+
+(S[SENTIMENT=?s]
+  (S[SENTIMENT=?s]
+    (NP[NUM=?n, PERS=?p, POSITION='object']
+      (NP[POSITION='object']
+        (ProN[GEN='fem', NUM='sg', PERS=3, TYPE='obj'] her))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] voice)))
+          (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+            (TV[ARG1='adj', NUM='sg', TENSE='simple_pres'] is)
+            (AdjP[SENTIMENT='pos']
+              (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] silky))
+              (Coord[TYPE='conj'] and)
+              (AdjP[SENTIMENT=?s] (Adj[] direct))))))))
+  ,
+  (Coord[TYPE='conj'] and)
+  (S[SENTIMENT=?s]
+    (NP[NUM=?n, PERS=?p, POSITION='object']
+      (NP[POSITION='object']
+        (ProN[GEN='fem', NUM='sg', PERS=3, TYPE='obj'] her))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='pl', PERS=3]
+            (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='pl', PERS=3] lyrics)))
+          (VP[NUM='pl', SENTIMENT='pos', TENSE='simple_pres']
+            (TV[ARG1='adj', NUM='pl', TENSE='simple_pres'] are)
+            (AdjP[SENTIMENT='pos']
+              (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] smart))
+              (Coord[TYPE='conj'] and)
+              (AdjP[SENTIMENT=?s] (Adj[] direct)))))))))
+
+---------------------------------------
+Sentece 24: But this CD is AWSOME!!!
+Num of trees: 3
+(S[SENTIMENT='pos']
+  (Coord[TYPE='disj'] but)
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+      (Det[NUM='sg', SUBCAT='demonstrative'] this)
+      (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='sg', PERS=3] CD)))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='adj', NUM='sg', TENSE='simple_pres'] is)
+      (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] AWSOME)))))
+
+(S[SENTIMENT='pos']
+  (Coord[TYPE='disj'] but)
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[NUM='sg', PERS=?p, POSITION=?x]
+      (NP[NUM='sg', PERS=?p]
+        (Det[NUM='sg', SUBCAT='demonstrative'] this))
+      (Clause[SENTIMENT=?s, TYPE='s']
+        (S[SENTIMENT=?s]
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] CD))))))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='adj', NUM='sg', TENSE='simple_pres'] is)
+      (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] AWSOME)))))
+
+(S[SENTIMENT=?s]
+  (Coord[TYPE='disj'] but)
+  (S[SENTIMENT=?s]
+    (NP[NUM='sg', PERS=?p, POSITION=?x]
+      (NP[NUM='sg', PERS=?p]
+        (Det[NUM='sg', SUBCAT='demonstrative'] this))
+      (Clause[SENTIMENT='pos', TYPE='s']
+        (S[MOOD='decl', SENTIMENT='pos']
+          (NP[NUM='sg', PERS=3]
+            (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='sg', PERS=3] CD)))
+          (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+            (TV[ARG1='adj', NUM='sg', TENSE='simple_pres'] is)
+            (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] AWSOME))))))))
+
+---------------------------------------
+Sentece 25: Mr. Lieven does an excellent job, but readers should worry about potential bias.
+Num of trees: 4
+(S[SENTIMENT='neg']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[NUM='sg', PERS=3]
+      (ProperNoun[NEED_DET=0, NUM='sg'] Mr Lieven))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='np', NUM='sg', TENSE='simple_pres'] does)
+      (NP[NUM='sg', PERS=3, SENTIMENT='pos']
+        (Det[NUM='sg', SUBCAT='article'] an)
+        (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] excellent))
+        (Nom[MASS=1, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[MASS=1, NUM='sg', PERS=3] job)))))
+  ,
+  (Coord[TYPE='disj'] but)
+  (S[MOOD='decl', SENTIMENT='neg']
+    (NP[NUM='pl', PERS=3]
+      (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='pl', PERS=3] readers)))
+    (VP[NUM=?n, SENTIMENT='neg', TENSE='simple_pres']
+      (TV[ARG1='cl', TENSE='simple_pres']
+        (Modal[FORM='should'] should))
+      (Clause[SENTIMENT='neg', TYPE='vp_inf']
+        (VP[NUM=?n, SENTIMENT='neg', TENSE='infinitive']
+          (TV[ARG1='pp', SENTIMENT='neg', TENSE='infinitive'] worry)
+          (PP[]
+            (P[] about)
+            (S[SENTIMENT=?s]
+              (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                (AdjP[SENTIMENT=?s] (Adj[] potential))
+                (Nom[MASS=1, NUM='sg', PERS=3, SENTIMENT=?s]
+                  (Noun[MASS=1, NUM='sg', PERS=3] bias))))))))))
+
+(S[SENTIMENT='neg']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[NUM='sg', PERS=3]
+      (ProperNoun[NEED_DET=0, NUM='sg'] Mr Lieven))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='np', NUM='sg', TENSE='simple_pres'] does)
+      (NP[NUM='sg', PERS=3, SENTIMENT='pos']
+        (Det[NUM='sg', SUBCAT='article'] an)
+        (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] excellent))
+        (Nom[MASS=1, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[MASS=1, NUM='sg', PERS=3] job)))))
+  ,
+  (Coord[TYPE='disj'] but)
+  (S[MOOD='decl', SENTIMENT='neg']
+    (NP[NUM='pl', PERS=3]
+      (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='pl', PERS=3] readers)))
+    (VP[NUM=?n, SENTIMENT='neg', TENSE='simple_pres']
+      (TV[ARG1='cl', TENSE='simple_pres']
+        (Modal[FORM='should'] should))
+      (Clause[SENTIMENT='neg', TYPE='vp_inf']
+        (VP[NUM=?n, SENTIMENT='neg', TENSE='infinitive']
+          (TV[ARG1='pp', SENTIMENT='neg', TENSE='infinitive'] worry)
+          (PP[]
+            (P[] about)
+            (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+              (AdjP[SENTIMENT=?s] (Adj[] potential))
+              (Nom[MASS=1, NUM='sg', PERS=3, SENTIMENT=?s]
+                (Noun[MASS=1, NUM='sg', PERS=3] bias)))))))))
+
+(S[SENTIMENT='neg']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[NUM='sg', PERS=3]
+      (ProperNoun[NEED_DET=0, NUM='sg'] Mr Lieven))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='np', NUM='sg', TENSE='simple_pres'] does)
+      (NP[NUM='sg', PERS=3, SENTIMENT='pos']
+        (Det[NUM='sg', SUBCAT='article'] an)
+        (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] excellent))
+        (Nom[MASS=1, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[MASS=1, NUM='sg', PERS=3] job)))))
+  ,
+  (Coord[TYPE='disj'] but)
+  (S[MOOD='decl', SENTIMENT='neg']
+    (NP[NUM='sg', PERS=3]
+      (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='pl', PERS=3] readers)))
+    (VP[NUM=?n, SENTIMENT='neg', TENSE='simple_pres']
+      (TV[ARG1='cl', TENSE='simple_pres']
+        (Modal[FORM='should'] should))
+      (Clause[SENTIMENT='neg', TYPE='vp_inf']
+        (VP[NUM=?n, SENTIMENT='neg', TENSE='infinitive']
+          (TV[ARG1='pp', SENTIMENT='neg', TENSE='infinitive'] worry)
+          (PP[]
+            (P[] about)
+            (S[SENTIMENT=?s]
+              (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+                (AdjP[SENTIMENT=?s] (Adj[] potential))
+                (Nom[MASS=1, NUM='sg', PERS=3, SENTIMENT=?s]
+                  (Noun[MASS=1, NUM='sg', PERS=3] bias))))))))))
+
+(S[SENTIMENT='neg']
+  (S[MOOD='decl', SENTIMENT='pos']
+    (NP[NUM='sg', PERS=3]
+      (ProperNoun[NEED_DET=0, NUM='sg'] Mr Lieven))
+    (VP[NUM='sg', SENTIMENT='pos', TENSE='simple_pres']
+      (TV[ARG1='np', NUM='sg', TENSE='simple_pres'] does)
+      (NP[NUM='sg', PERS=3, SENTIMENT='pos']
+        (Det[NUM='sg', SUBCAT='article'] an)
+        (AdjP[SENTIMENT='pos'] (Adj[SENTIMENT='pos'] excellent))
+        (Nom[MASS=1, NUM='sg', PERS=3, SENTIMENT=?s]
+          (Noun[MASS=1, NUM='sg', PERS=3] job)))))
+  ,
+  (Coord[TYPE='disj'] but)
+  (S[MOOD='decl', SENTIMENT='neg']
+    (NP[NUM='sg', PERS=3]
+      (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+        (Noun[NUM='pl', PERS=3] readers)))
+    (VP[NUM=?n, SENTIMENT='neg', TENSE='simple_pres']
+      (TV[ARG1='cl', TENSE='simple_pres']
+        (Modal[FORM='should'] should))
+      (Clause[SENTIMENT='neg', TYPE='vp_inf']
+        (VP[NUM=?n, SENTIMENT='neg', TENSE='infinitive']
+          (TV[ARG1='pp', SENTIMENT='neg', TENSE='infinitive'] worry)
+          (PP[]
+            (P[] about)
+            (NP[NUM='sg', PERS=3, SENTIMENT=?s]
+              (AdjP[SENTIMENT=?s] (Adj[] potential))
+              (Nom[MASS=1, NUM='sg', PERS=3, SENTIMENT=?s]
+                (Noun[MASS=1, NUM='sg', PERS=3] bias)))))))))

@@ -1,10 +1,10 @@
 from nltk.parse import FeatureEarleyChartParser 
 from nltk import grammar, parse
 
-keep_caps = ['I']
+keep_caps = ['I', 'Guthrie', 'Mr']
 
-to_parse = [1]
-success = []
+to_parse = [26]
+success = [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 15, 17, 18, 19, 20, 21, 22, 24, 25]
 #to_parse = success
 
 if len(to_parse) == 0:
@@ -20,6 +20,10 @@ with open("test_sent.txt", "r") as f:
             processed_line = processed_line.replace('"', ' " ')
             processed_line = processed_line.replace(',',' ,')
             processed_line = processed_line.replace(';',' ;')
+            processed_line = processed_line.replace("won't",'will not')
+            processed_line = processed_line.replace("it's",'it is')
+            processed_line = processed_line.replace("It's",'it is')
+            processed_line = processed_line.replace("I've",'I have')
             processed_line = processed_line.replace("n't"," n't")
             processed_line = processed_line.replace("'s", " 's").split()
             if processed_line[0] not in keep_caps:
