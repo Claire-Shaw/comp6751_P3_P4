@@ -3,8 +3,8 @@ from nltk import grammar, parse
 
 keep_caps = ['I']
 
-to_parse = [13]
-success = [1, 2, 3, 4, 5, 6, 7]
+to_parse = [1]
+success = []
 #to_parse = success
 
 if len(to_parse) == 0:

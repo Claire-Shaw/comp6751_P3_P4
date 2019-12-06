@@ -1,0 +1,12 @@
+
+---------------------------------------
+Sentece 1: This CD was horrible.
+Num of trees: 1
+(S[MOOD='decl', SENTIMENT='neg']
+  (NP[NUM='sg', PERS=3]
+    (Det[NUM='sg', SUBCAT='demonstrative'] this)
+    (Nom[MASS=?m, NUM='sg', PERS=3, SENTIMENT=?s]
+      (Noun[NUM='sg', PERS=3] CD)))
+  (VP[NUM=?n, SENTIMENT='neg', TENSE='simple_past']
+    (TV[ARG1='adj', TENSE='simple_past'] was)
+    (AdjP[SENTIMENT='neg'] (Adj[SENTIMENT='neg'] horrible))))

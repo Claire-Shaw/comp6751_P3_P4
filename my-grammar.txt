@@ -42,7 +42,7 @@ Clause[TYPE=vp_inf] -> VP[TENSE=infinitive]
 ### NP expansion productions ###
 
 NP[NUM=pl, PERS=?p] -> Nom[NUM=pl, PERS=?p] 
-NP[NUM=?n, PERS=?p] -> Det[NUM=?n, SUBCAT=article]
+NP[NUM=?n, PERS=?p] -> Det[NUM=?n, SUBCAT=demonstrative]
 NP[NUM=sg, PERS=?p] -> Nom[PERS=?p, MASS=1] 
 NP[NUM=?n, PERS=3] -> PropN[NUM=?n, NEED_DET=0]
 NP[NUM=pl, PERS=?p] -> AdjP Nom[NUM=pl, PERS=?p] 
@@ -199,11 +199,21 @@ AdvP -> Adv
 Predeterminer -> 'such'
 
 ### Determiners ###
-Det[NUM=sg] -> 'this' | 'every' | 'a' | 'an'
-Det[NUM=pl] -> 'these' | 'all' |  'several' | 'some' 
-Det -> 'the' | 'her' | 'his' | 'its' | 'their'
+Det[SUBCAT=article] -> 'the'
+Det[NUM=sg, SUBCAT=article] -> 'a' | 'an'
 
-Det[NUM=sg, SUBCAT=article] -> 'this'
+Det[NUM=sg, SUBCAT=demonstrative] -> 'this' | 'that'
+Det[NUM=pl, SUBCAT=demonstrative] -> 'those' | 'these'
+
+Det[SUBCAT=possessive] -> 'her' | 'his' | 'its' | 'their'
+
+Det[SUBCAT=wh] -> 'which' | 'what'
+
+Det[NUM=sg, SUBCAT=quantifying] -> 'every' 
+Det[NUM=pl, SUBCAT=quantifying] -> 'most' | 'all' |  'several' | 'some' 
+
+
+
 
 
 ### Coordinators ###
@@ -237,7 +247,7 @@ CD -> '87' | '11pm' | 'one' | 'two' | 'seven' | '17' | '135' | '1655' | '7' | '1
 ### Adjectives ###
 Adj -> 'flat' 
 Adj[SENTIMENT=pos] -> 'perfect' | 'terrific' | 'rich' | 'addicting' | 'fun'
-Adj[SENTIMENT=neg] -> 'uninventive' | 'simple' | 'disappointed'
+Adj[SENTIMENT=neg] -> 'uninventive' | 'simple' | 'disappointed' | 'horrible'
 
 ### Adverbs ###
 Adv -> 'also' | 'soon' | 'quickly' | 'just' | 'even'
@@ -279,7 +289,7 @@ PropN[NUM=pl, NEED_DET=1, PERS=3] -> 'Houston' 'Astros' | 'White' 'Sox' | 'Musli
 
 ### Nouns ###
 # Singular
-Noun[NUM=sg, PERS=3] -> 'sound' | 'campaign' | 'mode' | 'fact' | 'storyline'
+Noun[NUM=sg, PERS=3] -> 'sound' | 'campaign' | 'mode' | 'fact' | 'storyline' | 'CD'
 
 # Plural
 Noun[NUM=pl, PERS=3] -> 'dogs' | 'girls' | 'cars' 
