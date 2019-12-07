@@ -3,8 +3,8 @@ from nltk import grammar, parse
 
 keep_caps = ['I', 'Guthrie', 'Mr']
 
-to_parse = [3]
-#success = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25, 27, 29]
+to_parse = [26]
+#success = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 27, 29]
 #to_parse = success
 
 if len(to_parse) == 0:
@@ -12,7 +12,7 @@ if len(to_parse) == 0:
 print(to_parse)
 
 sentences = []
-with open("train_sent.txt", "r") as f:
+with open("test_sent.txt", "r") as f:
     for i, line in enumerate(f):
         if i+1 in to_parse:
             processed_line = line.replace('.', '')

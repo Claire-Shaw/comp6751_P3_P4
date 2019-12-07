@@ -91,8 +91,8 @@ Nom[NUM=?n, PERS=?p, MASS=?m] -> Nom[NUM=?n, PERS=?p, MASS=?m] Clause[TYPE=relat
 
 
 ### VP expansion productions ###
-VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> AdvP VP[TENSE=?t, NUM=?n, SENTIMENT=?s] 
-VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> VP[TENSE=?t, NUM=?n, SENTIMENT=?s] AdvP 
+VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> AdvP[SENTIMENT=?s] VP[TENSE=?t, NUM=?n, SENTIMENT=?s] 
+VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> VP[TENSE=?t, NUM=?n, SENTIMENT=?s] AdvP[SENTIMENT=?s] 
 
 VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> VP[NUM=?n, SENTIMENT=?s] Coord[TYPE=conj] VP[TENSE=?t, NUM=?n, SENTIMENT=?s]
 VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> VP[NUM=?n] Coord[TYPE=disj] VP[TENSE=?t, NUM=?n, SENTIMENT=?s]
@@ -179,9 +179,10 @@ DTV[TENSE=passive_past, VOICE=passive, ARG1=?a1, ARG2=?a2] -> Aux[TYPE=passive] 
 
 
 ### PP expansion productions ###
-PP -> P NP
-PP -> P VP
-PP -> P S[MOOD=decl]
+PP[SENTIMENT=?s] -> P NP[SENTIMENT=?s]
+PP[SENTIMENT=?s] -> P VP[SENTIMENT=?s]
+PP[SENTIMENT=?s] -> P S[MOOD=decl, SENTIMENT=?s]
+PP[SENTIMENT=?s] -> P AdjP[SENTIMENT=?s]
 
 
 ### DP expansion productions ###
@@ -212,16 +213,19 @@ AdjP[SENTIMENT=neg] -> Neg AdjP[SENTIMENT=pos]
 
 
 ### Adverb expansion productions ###
-AdvP -> Adv
-AdvP -> Adv AdvP
-AdvP -> Adv ',' AdvP
+AdvP[SENTIMENT=?s] -> Adv[SENTIMENT=?s]
+AdvP[SENTIMENT=?s] -> Adv[SENTIMENT=?s] AdvP[SENTIMENT=?s]
+AdvP[SENTIMENT=?s] -> Adv[SENTIMENT=?s] ',' AdvP[SENTIMENT=?s]
+AdvP[SENTIMENT=?s] -> Adv ',' Coord[TYPE=disj] AdvP[SENTIMENT=?s]
+AdvP[SENTIMENT=?s] -> AdjP[SENTIMENT=?s] AdvP[SENTIMENT=?s]
+AdvP[SENTIMENT=?s] -> AdvP[SENTIMENT=?s] PP[SENTIMENT=?s] 
 
 # ################### #
 # Lexical Productions #
 # ################### #
 
 ### Predeterminers ###
-Predeterminer -> 'such' | 'all'
+Predeterminer -> 'such' | 'all' | 'any' 'of'
 
 ### Determiners ###
 Det[SUBCAT=article] -> 'the'
@@ -279,7 +283,7 @@ Ordinal -> 'first'
 Quantifier -> 'many' | 'few'
 
 ### Adjectives ###
-Adj -> 'flat' | 'main' | 'direct' | 'potential'
+Adj -> 'flat' | 'main' | 'direct' | 'potential' | 'far'
 
 Adj[SENTIMENT=pos] -> 'perfect' | 'terrific' | 'rich' | 'addicting' | 'fun' | 'cool' | 'good' | 'easy' | 'nice' | 'excellent'
 Adj[SENTIMENT=pos] -> 'strong' | 'independent' | 'great' | 'few' | 'rare' | 'cute' | 'silky' | 'lyrical' | 'smart' | 'AWSOME' | 'entertaining'
@@ -287,8 +291,8 @@ Adj[SENTIMENT=pos] -> 'strong' | 'independent' | 'great' | 'few' | 'rare' | 'cut
 Adj[SENTIMENT=neg] -> 'uninventive' | 'simple' | 'disappointed' | 'horrible' | 'lousy' | 'basic' | 'bad' | 'terrible'
 
 ### Adverbs ###
-Adv -> 'also' | 'soon' | 'quickly' | 'just' | 'even' | 'extremely' | 'really' | 'very' | 'much'
-
+Adv -> 'also' | 'soon' | 'quickly' | 'just' | 'even' | 'extremely' | 'really' | 'very' | 'much' | 'away'
+Adv[SENTIMENT=pos] -> 'better'
 
 
 ### Pronouns ###
@@ -389,6 +393,7 @@ IV[TENSE=infinitive] -> 'disappear' | 'walk' | 'sing' | 'dance' | 'read'
 IV[TENSE=infinitive, SENTIMENT=neg] -> 'disappoint'
 TV[TENSE=infinitive, ARG1=pp] -> 'work' 
 TV[TENSE=infinitive, ARG1=pp, SENTIMENT=neg] -> 'worry' 
+TV[TENSE=infinitive, ARG1=np, SENTIMENT=pos] -> 'like' 
 TV[TENSE=infinitive, ARG1=np] -> 'sell' | 'combat' | 'be'
 TV[TENSE=infinitive, ARG1=adj] -> 'taste' | 'be'
 
@@ -396,7 +401,7 @@ TV[TENSE=infinitive, ARG1=adj] -> 'taste' | 'be'
 ## Past Participle ##
 IV[TENSE=past_participle] -> 'disappeared' | 'walked' | 'attacked'
 
-TV[TENSE=past_participle, ARG1=np] -> 'recommended' | 'elected'
+TV[TENSE=past_participle, ARG1=np] -> 'recommended' | 'elected' | 'heard'
 TV[TENSE=past_participle, ARG1=pp] -> 'based' | 'built' | 'killed' | 'named' | 'criticised' 
 TV[TENSE=past_participle, ARG1=cl] -> 'said'
 

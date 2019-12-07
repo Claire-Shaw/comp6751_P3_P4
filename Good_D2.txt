@@ -1,12 +1,18 @@
 
 ---------------------------------------
-Sentece 3: It's just bad.
+Sentece 26: I did not like any of the songs.
 Num of trees: 1
 (S[MOOD='decl', SENTIMENT='neg']
-  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=3, TYPE='subj'] it))
-  (VP[NUM=?n, SENTIMENT='neg', TENSE='simple_pres', VOICE='active']
-    (V_B[NUM='sg', SENTIMENT='neg', TENSE='simple_pres']
-      (TV[ARG1='adj', NUM='sg', TENSE='simple_pres'] is)
-      (AdjP[SENTIMENT='neg']
-        (AdvP[] (Adv[] just))
-        (Adj[SENTIMENT='neg'] bad)))))
+  (NP[POSITION='subject'] (ProN[NUM='sg', PERS=1, TYPE='subj'] I))
+  (VP[NUM=?n, SENTIMENT='neg', TENSE='simple_past', VOICE='active']
+    (Aux[FORM='do', TENSE='past'] did)
+    (V_B[SENTIMENT='neg', TENSE=?t]
+      (NegP[SENTIMENT='neg', TENSE=?t]
+        (Neg[] not)
+        (V_B[NUM=?n, SENTIMENT='pos', TENSE='infinitive']
+          (TV[ARG1='np', SENTIMENT='pos', TENSE='infinitive'] like)
+          (NP[NUM='pl', PERS=3, SENTIMENT=?s]
+            (Predeterminer[] any of)
+            (Det[SUBCAT='article'] the)
+            (Nom[MASS=?m, NUM='pl', PERS=3, SENTIMENT=?s]
+              (Noun[NUM='pl', PERS=3] songs))))))))
