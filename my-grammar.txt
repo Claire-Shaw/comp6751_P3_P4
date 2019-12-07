@@ -19,7 +19,7 @@ S[SENTIMENT=?s] -> S ',' Coord[TYPE=disj] S[SENTIMENT=?s]
 S[SENTIMENT=?s] -> S[SENTIMENT=?s] ',' Coord[TYPE=conj] S[SENTIMENT=?s]
 S[SENTIMENT=?s] -> S[SENTIMENT=?s] Coord[TYPE=conj] S[SENTIMENT=?s]
 S[SENTIMENT=?s] -> NP[SENTIMENT=?s]
-S[SENTIMENT=?s] -> Coord S[SENTIMENT=?s] 
+S[SENTIMENT=?s] -> Coord[TYPE=disj] S[SENTIMENT=?s] 
 
 S -> S ';' S
 S -> PP ',' S
@@ -38,11 +38,22 @@ S[MOOD=imper] -> VP[TENSE=infinitive]
 Clause[TYPE=?t, SENTIMENT=?s] -> Clause[TYPE=?t, SENTIMENT=?s] Coord[TYPE=conj] Clause[TYPE=?t, SENTIMENT=?s]
 Clause[TYPE=s, SENTIMENT=?s] -> S[MOOD=decl, SENTIMENT=?s]
 Clause[TYPE=relative, SENTIMENT=?s] -> ProN[TYPE=relative] S[SENTIMENT=?s]
-Clause[TYPE=vp_inf, SENTIMENT=?s] -> 'to' VP[TENSE=infinitive, SENTIMENT=?s]
 Clause[TYPE=vp_inf, SENTIMENT=?s] -> VP[TENSE=infinitive, SENTIMENT=?s]
 
 
 ### NP expansion productions ###
+## Coordinated NPs
+NP[NUM=pl, PERS=3, POSITION=?x] -> NP[POSITION=?x] Coord[TYPE=conj] NP[POSITION=?x]
+NP[NUM=pl, PERS=3, POSITION=?x] -> NP[POSITION=?x] ',' Coord[TYPE=conj] NP[POSITION=?x] ','
+
+NP[NUM=?n, PERS=?p, POSITION=?x] -> NP[NUM=?n, PERS=?p, POSITION=?x] Clause[TYPE=s]
+NP[NUM=?n, PERS=?p, POSITION=?x] -> NP[NUM=?n, PERS=?p, POSITION=?x] ',' Clause[TYPE=wh]
+
+## Negated NPs ##
+NP[NUM=?n, PERS=?p, POSITION=?x, SENTIMENT=pos] -> Neg NP[NUM=?n, PERS=?p, POSITION=?x, SENTIMENT=neg]
+NP[NUM=?n, PERS=?p, POSITION=?x, SENTIMENT=neg] -> Neg NP[NUM=?n, PERS=?p, POSITION=?x, SENTIMENT=pos]
+
+## NP with NO determiner ##
 NP[POSITION=subject] -> ProN[TYPE=subj, NUM=?n, PERS=?p] 
 NP[POSITION=object] -> ProN[TYPE=rflex, NUM=?n, PERS=?p] | ProN[TYPE=obj, NUM=?n, PERS=?p]
 
@@ -56,20 +67,14 @@ NP[NUM=?n, PERS=3, SENTIMENT=?s] -> AdjP[SENTIMENT=?s] ProperNoun[NUM=?n, NEED_D
 
 NP[NUM=sg, SENTIMENT=?s] -> VP[TENSE=gerund, SENTIMENT=?s]
 
+## NP with determiner ##
 NP[NUM=?n, PERS=3] -> Det[NUM=?n] ProperNoun[NUM=?n] 
 NP[NUM=?n, PERS=?p, SENTIMENT=?s] -> Det[NUM=?n] Nom[NUM=?n, PERS=?p, SENTIMENT=?s]
 NP[NUM=?n, PERS=?p, POSITION=?x, SENTIMENT=?s] -> Det[NUM=?n] '"' NP[NUM=?n, PERS=?p, POSITION=?x, SENTIMENT=?s] '"'
 NP[NUM=?n, PERS=?p, SENTIMENT=?s] -> Det[NUM=?n] AdjP[SENTIMENT=?s] Nom[NUM=?n, PERS=?p, SENTIMENT=?s]
 NP[NUM=?n, PERS=?p, SENTIMENT=?s] -> Predeterminer Det[NUM=?n] AdjP[SENTIMENT=?s] Nom[NUM=?n, PERS=?p]
-
-
-## Coordoinated NPs
-NP[NUM=pl, PERS=3, POSITION=?x] -> NP[POSITION=?x] Coord[TYPE=conj] NP[POSITION=?x]
-NP[NUM=pl, PERS=3, POSITION=?x] -> NP[POSITION=?x] ',' Coord[TYPE=conj] NP[POSITION=?x] ','
-
-
-NP[NUM=?n, PERS=?p, POSITION=?x] -> NP[NUM=?n, PERS=?p, POSITION=?x] Clause[TYPE=s]
-NP[NUM=?n, PERS=?p, POSITION=?x] -> NP[NUM=?n, PERS=?p, POSITION=?x] ',' Clause[TYPE=wh]
+NP[NUM=?n, PERS=?p, SENTIMENT=?s] -> Predeterminer Det[NUM=?n] Nom[NUM=?n, PERS=?p]
+NP[NUM=?n, PERS=?p, SENTIMENT=?s] -> Det[NUM=?n, SUBCAT=article] Postdeterminer Nom[NUM=?n, PERS=?p, SENTIMENT=?s]
 
 
 
@@ -92,17 +97,50 @@ VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> VP[TENSE=?t, NUM=?n, SENTIMENT=?s] AdvP
 VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> VP[NUM=?n, SENTIMENT=?s] Coord[TYPE=conj] VP[TENSE=?t, NUM=?n, SENTIMENT=?s]
 VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> VP[NUM=?n] Coord[TYPE=disj] VP[TENSE=?t, NUM=?n, SENTIMENT=?s]
 
-VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> IV[TENSE=?t, NUM=?n, SENTIMENT=?s]
 
-VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> TV[TENSE=?t, NUM=?n, ARG1=np, SENTIMENT=?s] NP[SENTIMENT=?s, POSITION=object]
-VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> TV[TENSE=?t, NUM=?n, ARG1=pp, SENTIMENT=?s] PP
-VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> TV[TENSE=?t, NUM=?n, ARG1=cl, SENTIMENT=?s] Clause[TYPE=s, SENTIMENT=?s]
-VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> TV[TENSE=?t, NUM=?n, ARG1=cl, SENTIMENT=?s] Clause[TYPE=vp_inf, SENTIMENT=?s]
-VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> TV[TENSE=?t, NUM=?n, ARG1=adj, SENTIMENT=?s] AdjP[SENTIMENT=?s]
 
-VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> DTV[TENSE=?t, NUM=?n, ARG1=np, ARG2=pp, SENTIMENT=?s] NP[POSITION=object, SENTIMENT=?s] PP
-VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> DTV[TENSE=?t, NUM=?n, ARG1=pp, ARG2=pp, SENTIMENT=?s] PP PP
+### BASIC TENSES ###
+VP[TENSE=infinitive, SENTIMENT=?s] -> 'to' V_B[TENSE=infinitive, SENTIMENT=?s]
+VP[TENSE=infinitive, SENTIMENT=?s] -> V_B[TENSE=infinitive, SENTIMENT=?s]
 
+VP[TENSE=simple_pres, VOICE=active, NUM=?n, SENTIMENT=?s] -> V_B[TENSE=simple_pres, SENTIMENT=?s]
+
+VP[TENSE=simple_past, VOICE=active, NUM=?n, SENTIMENT=?s] -> Aux[FORM=do, TENSE=past] V_B[TENSE=simple_pres, SENTIMENT=?s]
+VP[TENSE=simple_past, VOICE=active, NUM=?n, SENTIMENT=?s] -> V_B[TENSE=simple_past, SENTIMENT=?s]
+
+VP[TENSE=simple_future, VOICE=active, NUM=?n, SENTIMENT=?s] -> Modal[FORM=will] V_B[TENSE=infinitive, SENTIMENT=?s]
+
+VP[TENSE=pres_perf, VOICE=active, NUM=?n, SENTIMENT=?s] -> Aux[FORM=have, TENSE=past] V_B[TENSE=past_participle, SENTIMENT=?s]
+
+VP[TENSE=future_perf, VOICE=active, NUM=?n, SENTIMENT=?s] -> Modal[FORM=will] Aux[FORM=have, TENSE=inf] V_B[TENSE=past_participle, SENTIMENT=?s]
+
+VP[TENSE=past_perf, VOICE=active, NUM=?n, SENTIMENT=?s] -> Aux[FORM=have, TENSE=past] V_B[TENSE=past_participle, SENTIMENT=?s]
+
+### PROGRESSIVE TENSES ###
+VP[TENSE=pres_progressive, VOICE=active, NUM=?n, SENTIMENT=?s] -> Aux[FORM=be, TENSE=present] V_B[TENSE=pres_participle, SENTIMENT=?s]
+VP[TENSE=past_progressive, VOICE=active, NUM=?n, SENTIMENT=?s] -> Aux[FORM=be, TENSE=past] V_B[TENSE=pres_participle, SENTIMENT=?s]
+VP[TENSE=future_progressive, VOICE=active, NUM=?n, SENTIMENT=?s] -> Aux[FORM=be, TENSE=present] V_B[TENSE=pres_participle, SENTIMENT=?s]
+
+VP[TENSE=gerund, SENTIMENT=?s] -> V_B[TENSE=pres_participle, SENTIMENT=?s]
+
+
+### V_BAR RULES ###
+V_B[TENSE=?t, NUM=?n, SENTIMENT=?s] -> IV[TENSE=?t, NUM=?n, SENTIMENT=?s]
+
+V_B[TENSE=?t, NUM=?n, SENTIMENT=?s] -> TV[TENSE=?t, NUM=?n, ARG1=adj, SENTIMENT=?s] AdjP[SENTIMENT=?s]
+V_B[TENSE=?t, NUM=?n, SENTIMENT=?s] -> TV[TENSE=?t, NUM=?n, ARG1=np, SENTIMENT=?s] NP[POSITION=object, SENTIMENT=?s]
+V_B[TENSE=?t, NUM=?n, SENTIMENT=?s] -> TV[TENSE=?t, NUM=?n, ARG1=pp, SENTIMENT=?s] PP
+V_B[TENSE=?t, NUM=?n, SENTIMENT=?s] -> TV[TENSE=?t, NUM=?n, ARG1=cl, SENTIMENT=?s] Clause[TYPE=s, SENTIMENT=?s]
+V_B[TENSE=?t, NUM=?n, SENTIMENT=?s] -> TV[TENSE=?t, NUM=?n, ARG1=cl, SENTIMENT=?s] Clause[TYPE=vp_inf, SENTIMENT=?s]
+
+V_B[TENSE=?t, NUM=?n, SENTIMENT=?s] -> DTV[TENSE=?t, NUM=?n, ARG1=np, ARG2=pp, SENTIMENT=?s] NP[POSITION=object, SENTIMENT=?s] PP
+V_B[TENSE=?t, NUM=?n, SENTIMENT=?s] -> DTV[TENSE=?t, NUM=?n, ARG1=pp, ARG2=pp, SENTIMENT=?s] PP PP
+
+V_B[TENSE=?t, SENTIMENT=?s] -> NegP[TENSE=?t, SENTIMENT=?s]
+
+## Negated Verb Phrases ##
+NegP[TENSE=?t, SENTIMENT=pos] -> Neg V_B[TENSE=infinitive, SENTIMENT=neg]
+NegP[TENSE=?t, SENTIMENT=neg] -> Neg V_B[TENSE=infinitive, SENTIMENT=pos]
 
 
 ## Auxiliary Verbs ##
@@ -129,50 +167,6 @@ Modal[FORM=could] -> 'could'
 Modal[FORM=should] -> 'should'
 
 
-## Tense: Simple Future ##
-IV[TENSE=simple_future, VOICE=active] -> Modal[FORM=will] IV[TENSE=infinitive]
-TV[TENSE=simple_future, VOICE=active, ARG1=?a1] -> Modal[FORM=will] TV[TENSE=infinitive, ARG1=?a1]
-DTV[TENSE=simple_future, VOICE=active, ARG1=?a1, ARG2=?a2] -> Modal[FORM=will] DTV[TENSE=infinitive, ARG1=?a1, ARG2=?a2]
-# Simple Future NEGATED #
-IV[TENSE=simple_future, VOICE=active, SENTIMENT=pos] -> Modal[FORM=will] Neg IV[TENSE=infinitive, SENTIMENT=neg]
-IV[TENSE=simple_future, VOICE=active, SENTIMENT=neg] -> Modal[FORM=will] Neg IV[TENSE=infinitive, SENTIMENT=pos]
-TV[TENSE=simple_future, VOICE=active, ARG1=?a1, SENTIMENT=pos] -> Modal[FORM=will] Neg TV[TENSE=infinitive, ARG1=?a1, SENTIMENT=neg]
-TV[TENSE=simple_future, VOICE=active, ARG1=?a1, SENTIMENT=neg] -> Modal[FORM=will] Neg TV[TENSE=infinitive, ARG1=?a1, SENTIMENT=pos]
-DTV[TENSE=simple_future, VOICE=active, ARG1=?a1, ARG2=?a2, SENTIMENT=pos] -> Modal[FORM=will] Neg DTV[TENSE=infinitive, ARG1=?a1, ARG2=?a2, SENTIMENT=neg]
-DTV[TENSE=simple_future, VOICE=active, ARG1=?a1, ARG2=?a2, SENTIMENT=neg] -> Modal[FORM=will] Neg DTV[TENSE=infinitive, ARG1=?a1, ARG2=?a2, SENTIMENT=pos]
-
-
-## Tense: Present Perfect ##
-IV[TENSE=pres_perf, VOICE=active] -> Aux[FORM=have, TENSE=present] IVBar[TENSE=past_participle]
-TV[TENSE=pres_perf, VOICE=active, ARG1=?a1] -> Aux[FORM=have, TENSE=present] TVBar[TENSE=past_participle, ARG1=?a1]
-DTV[TENSE=pres_perf, VOICE=active, ARG1=?a1, ARG2=?a2] -> Aux[FORM=have, TENSE=present] DTVBar[TENSE=past_participle, ARG1=?a1, ARG2=?a2]
-
-## Tense: Future Perfect ##
-IV[TENSE=future_perf, VOICE=active] -> Modal[FORM=will] Aux[FORM=have, TENSE=inf] IVBar[TENSE=past_participle]
-TV[TENSE=future_perf, VOICE=active, ARG1=?a1] -> Modal[FORM=will] Aux[FORM=have, TENSE=inf] TVBar[TENSE=past_participle, ARG1=?a1]
-DTV[TENSE=future_perf, VOICE=active, ARG1=?a1, ARG2=?a2] -> Modal[FORM=will] Aux[FORM=have, TENSE=inf] DTVBar[TENSE=past_participle, ARG1=?a1, ARG2=?a2]
-
-## Tense: Past Perfect ##
-IV[TENSE=past_perf, VOICE=active] -> Aux[FORM=have, TENSE=past] IVBar[TENSE=past_participle]
-TV[TENSE=past_perf, VOICE=active, ARG1=?a1] -> Aux[FORM=have, TENSE=past] TVBar[TENSE=past_participle, ARG1=?a1]
-DTV[TENSE=past_perf, VOICE=active, ARG1=?a1, ARG2=?a2] -> Aux[FORM=have, TENSE=past] DTVBar[TENSE=past_participle, ARG1=?a1, ARG2=?a2]
-
-## Tense: Present Progressive ##
-IV[TENSE=pres_progressive, VOICE=active] -> Aux[FORM=be, TENSE=present] IVBar[TENSE=pres_participle]
-TV[TENSE=pres_progressive, VOICE=active, ARG1=?a1] -> Aux[FORM=be, TENSE=present] TVBar[TENSE=pres_participle, ARG1=?a1]
-DTV[TENSE=pres_progressive, VOICE=active, ARG1=?a1, ARG2=?a2] -> Aux[FORM=be, TENSE=present] DTVBar[TENSE=pres_participle, ARG1=?a1, ARG2=?a2]
-
-## Tense: Past Progressive ##
-IV[TENSE=past_progressive, VOICE=active] -> Aux[FORM=be, TENSE=past] IVBar[TENSE=pres_participle]
-TV[TENSE=past_progressive, VOICE=active, ARG1=?a1] -> Aux[FORM=be, TENSE=past] TVBar[TENSE=pres_participle, ARG1=?a1]
-DTV[TENSE=past_progressive, VOICE=active, ARG1=?a1, ARG2=?a2] -> Aux[FORM=be, TENSE=past] DTVBar[TENSE=pres_participle, ARG1=?a1, ARG2=?a2]
-
-## Tense: Gerundive ##
-IV[TENSE=gerund, SENTIMENT=?s] -> IVBar[TENSE=pres_participle, SENTIMENT=?s]
-TV[TENSE=gerund, SENTIMENT=?s] -> TVBar[TENSE=pres_participle, SENTIMENT=?s]
-DTV[TENSE=gerund, SENTIMENT=?s] -> DTVBar[TENSE=pres_participle, SENTIMENT=?s]
-
-
 ## Passive voice ##
 IV[TENSE=passive_past, VOICE=passive] -> Aux[TYPE=passive] IVBar[TENSE=past_participle]
 TV[TENSE=passive_past, VOICE=passive, ARG1=?a1] -> Aux[TYPE=passive] TVBar[TENSE=past_participle, ARG1=?a1]
@@ -197,6 +191,7 @@ DP -> NP POSS
 ### AdjP expansion productions ###
 AdjP[SENTIMENT=?s] -> Adj[SENTIMENT=?s]
 AdjP[SENTIMENT=?s] -> AdvP Adj[SENTIMENT=?s]
+AdjP[SENTIMENT=?s] -> Adj[SENTIMENT=?s] Clause[TYPE=vp_inf, SENTIMENT=?s]
 
 AdjP[SENTIMENT=?s] -> AdjP[SENTIMENT=?s] Adj[SENTIMENT=?s]
 
@@ -226,7 +221,7 @@ AdvP -> Adv ',' AdvP
 # ################### #
 
 ### Predeterminers ###
-Predeterminer -> 'such'
+Predeterminer -> 'such' | 'all'
 
 ### Determiners ###
 Det[SUBCAT=article] -> 'the'
@@ -240,7 +235,14 @@ Det[SUBCAT=possessive] -> 'her' | 'his' | 'its' | 'their' | 'your' | 'my'
 Det[SUBCAT=wh] -> 'which' | 'what'
 
 Det[NUM=sg, SUBCAT=quantifying] -> 'every' 
-Det[NUM=pl, SUBCAT=quantifying] -> 'most' | 'all' |  'several' | 'some' 
+Det[NUM=pl, SUBCAT=quantifying] -> 'most' | 'all' |  'several' | 'some' | 'few' | 'any' 'of'
+
+### Postdeterminers ###
+Postdeterminer -> CD Ordinal
+Postdeterminer -> CD Quantifier
+Postdeterminer -> Ordinal Quantifier
+Postdeterminer -> CD Ordinal Quantifier
+Postdeterminer -> CD | Ordinal | Quantifier
 
 
 ### Coordinators ###
@@ -270,13 +272,19 @@ P ->  'through' | 'to' | 'under' | 'up' | 'with'
 ### Cardinal Numbers ###
 CD -> '87' | '11pm' | 'one' | 'two' | 'seven' | '17' | '135' | '1655' | '7' | '1985'
 
+### Ordinals ###
+Ordinal -> 'first'
+
+### Quantifier ###
+Quantifier -> 'many' | 'few'
+
 ### Adjectives ###
 Adj -> 'flat' | 'main' | 'direct' | 'potential'
 
 Adj[SENTIMENT=pos] -> 'perfect' | 'terrific' | 'rich' | 'addicting' | 'fun' | 'cool' | 'good' | 'easy' | 'nice' | 'excellent'
-Adj[SENTIMENT=pos] -> 'strong' | 'independent' | 'great' | 'few' | 'rare' | 'cute' | 'silky' | 'lyrical' | 'smart' | 'AWSOME'
+Adj[SENTIMENT=pos] -> 'strong' | 'independent' | 'great' | 'few' | 'rare' | 'cute' | 'silky' | 'lyrical' | 'smart' | 'AWSOME' | 'entertaining'
 
-Adj[SENTIMENT=neg] -> 'uninventive' | 'simple' | 'disappointed' | 'horrible' | 'lousy'
+Adj[SENTIMENT=neg] -> 'uninventive' | 'simple' | 'disappointed' | 'horrible' | 'lousy' | 'basic' | 'bad' | 'terrible'
 
 ### Adverbs ###
 Adv -> 'also' | 'soon' | 'quickly' | 'just' | 'even' | 'extremely' | 'really' | 'very' | 'much'
@@ -331,7 +339,8 @@ Noun[NUM=sg, PERS=3] -> 'beginner' | 'tablet' | 'curve' | 'game' | 'character' |
 Noun[NUM=sg, PERS=3, SENTIMENT=pos] -> 'genius' | 'choice'
 
 # Plural
-Noun[NUM=pl, PERS=3] -> 'dogs' | 'girls' | 'cars' | 'controls' | 'pits' | 'remakes' | 'lyrics' | 'readers'
+Noun[NUM=pl, PERS=3] -> 'dogs' | 'girls' | 'cars' | 'controls' | 'pits' | 'remakes' | 'lyrics' | 'readers' | 'CDs'
+Noun[NUM=pl, PERS=3] -> 'songs' | 'essentials' | 'exercises'
 
 # Mass nouns
 Noun[NUM=sg, PERS=3, MASS=1] -> 'cancer' | 'incarceration' | 'time' | 'learning' | 'gameplay' | 'job' | 'bias'
@@ -376,26 +385,26 @@ TTV[TENSE=simple_past, ARG1=np, ARG2=pp, ARG3=pp] -> 'escaped'
 
 
 ## Tense: Infinitive ##
-IV[TENSE=infinitive] -> 'disappear' | 'walk' | 'sing' | 'dance'
+IV[TENSE=infinitive] -> 'disappear' | 'walk' | 'sing' | 'dance' | 'read'
 IV[TENSE=infinitive, SENTIMENT=neg] -> 'disappoint'
 TV[TENSE=infinitive, ARG1=pp] -> 'work' 
 TV[TENSE=infinitive, ARG1=pp, SENTIMENT=neg] -> 'worry' 
 TV[TENSE=infinitive, ARG1=np] -> 'sell' | 'combat' | 'be'
-TV[TENSE=infinitive, ARG1=adj] -> 'taste' 
+TV[TENSE=infinitive, ARG1=adj] -> 'taste' | 'be'
 
 
 ## Past Participle ##
-IVBar[TENSE=past_participle] -> 'disappeared' | 'walked' | 'attacked'
+IV[TENSE=past_participle] -> 'disappeared' | 'walked' | 'attacked'
 
-TVBar[TENSE=past_participle, ARG1=np] -> 'recommended' | 'elected'
-TVBar[TENSE=past_participle, ARG1=pp] -> 'based' | 'built' | 'killed' | 'named' | 'criticised' 
-TVBar[TENSE=past_participle, ARG1=cl] -> 'said'
+TV[TENSE=past_participle, ARG1=np] -> 'recommended' | 'elected'
+TV[TENSE=past_participle, ARG1=pp] -> 'based' | 'built' | 'killed' | 'named' | 'criticised' 
+TV[TENSE=past_participle, ARG1=cl] -> 'said'
 
 DTVBar[TENSE=past_participle, ARG1=np, ARG2=pp] -> 'wrote' | 'backed'
 DTVBar[TENSE=past_participle, ARG1=pp, ARG2=pp] -> 'approached' | 'formed' | 'linked'
 
 ## Present Participle ##
-IVBar[TENSE=pres_participle] -> 'disappearing' | 'walking' 
-TVBar[TENSE=pres_participle, ARG1=pp, SENTIMENT=pos] -> 'maturing'
-DTVBar[TENSE=pres_participle, ARG1=np, ARG2=pp] -> 'transporting' 
+IV[TENSE=pres_participle] -> 'disappearing' | 'walking' 
+TV[TENSE=pres_participle, ARG1=pp, SENTIMENT=pos] -> 'maturing'
+DTV[TENSE=pres_participle, ARG1=np, ARG2=pp] -> 'transporting' 
 
