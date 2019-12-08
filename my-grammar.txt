@@ -1,12 +1,7 @@
+## Based on 
 ## Natural Language Toolkit: feat0.fcfg
-##
-## First example of a feature-based grammar for English, illustrating
-## value-sharing of NUM and TENSE features.
-## Used in Feature-Based Grammars chapter.
-## 
-## Author: Ewan Klein <ewan@inf.ed.ac.uk> 
-## URL: <http://nltk.sourceforge.net>
-## For license information, see LICENSE.TXT
+## Author: Claire Shaw 40022429
+
 
 % start S
 # ################### #
@@ -20,9 +15,7 @@ S[SENTIMENT=?s] -> S[SENTIMENT=?s] ',' Coord[TYPE=conj] S[SENTIMENT=?s]
 S[SENTIMENT=?s] -> S[SENTIMENT=?s] Coord[TYPE=conj] S[SENTIMENT=?s]
 S[SENTIMENT=?s] -> NP[SENTIMENT=?s]
 S[SENTIMENT=?s] -> Coord[TYPE=disj] S[SENTIMENT=?s] 
-
-S -> S ';' S
-S -> PP ',' S
+S[SENTIMENT=?s] -> PP ',' S[SENTIMENT=?s]
 
 # Declarative sentence
 S[MOOD=decl, SENTIMENT=?s] -> NP[NUM=?n, PERS=?p, SENTIMENT=?s, POSITION=subject] VP[NUM=?n, PERS?=p, SENTIMENT=?s]
@@ -56,7 +49,6 @@ NP[NUM=?n, PERS=?p, POSITION=?x, SENTIMENT=neg] -> Neg NP[NUM=?n, PERS=?p, POSIT
 ## NP with NO determiner ##
 NP[POSITION=subject] -> ProN[TYPE=subj, NUM=?n, PERS=?p] 
 NP[POSITION=object] -> ProN[TYPE=rflex, NUM=?n, PERS=?p] | ProN[TYPE=obj, NUM=?n, PERS=?p]
-
 NP[NUM=pl, PERS=?p] -> Nom[NUM=pl, PERS=?p] 
 NP[NUM=?n, PERS=?p] -> Det[NUM=?n, SUBCAT=demonstrative]
 NP[NUM=sg, PERS=?p] -> Nom[PERS=?p, MASS=1] 
@@ -64,7 +56,6 @@ NP[NUM=?n, PERS=3] -> ProperNoun[NUM=?n, NEED_DET=0]
 NP[NUM=pl, PERS=?p, SENTIMENT=?s] -> AdjP[SENTIMENT=?s] Nom[NUM=pl, PERS=?p] 
 NP[NUM=?n, PERS=?p, SENTIMENT=?s] -> AdjP[SENTIMENT=?s] Nom[NUM=?n, PERS=?p, MASS=1]
 NP[NUM=?n, PERS=3, SENTIMENT=?s] -> AdjP[SENTIMENT=?s] ProperNoun[NUM=?n, NEED_DET=0]
-
 NP[NUM=sg, SENTIMENT=?s] -> VP[TENSE=gerund, SENTIMENT=?s]
 
 ## NP with determiner ##
@@ -91,12 +82,13 @@ Nom[NUM=?n, PERS=?p, MASS=?m] -> Nom[NUM=?n, PERS=?p, MASS=?m] Clause[TYPE=relat
 
 
 ### VP expansion productions ###
+## Adverb insertion ##
 VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> AdvP[SENTIMENT=?s] VP[TENSE=?t, NUM=?n, SENTIMENT=?s] 
 VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> VP[TENSE=?t, NUM=?n, SENTIMENT=?s] AdvP[SENTIMENT=?s] 
 
+## Coordinated VPs
 VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> VP[NUM=?n, SENTIMENT=?s] Coord[TYPE=conj] VP[TENSE=?t, NUM=?n, SENTIMENT=?s]
 VP[TENSE=?t, NUM=?n, SENTIMENT=?s] -> VP[NUM=?n] Coord[TYPE=disj] VP[TENSE=?t, NUM=?n, SENTIMENT=?s]
-
 
 
 ### BASIC TENSES ###
@@ -138,7 +130,7 @@ V_B[TENSE=?t, NUM=?n, SENTIMENT=?s] -> DTV[TENSE=?t, NUM=?n, ARG1=pp, ARG2=pp, S
 
 V_B[TENSE=?t, SENTIMENT=?s] -> NegP[TENSE=?t, SENTIMENT=?s]
 
-## Negated Verb Phrases ##
+### Negated Verb Phrases ###
 NegP[TENSE=?t, SENTIMENT=pos] -> Neg V_B[TENSE=infinitive, SENTIMENT=neg]
 NegP[TENSE=?t, SENTIMENT=neg] -> Neg V_B[TENSE=infinitive, SENTIMENT=pos]
 
@@ -250,7 +242,6 @@ Postdeterminer -> CD | Ordinal | Quantifier
 
 
 ### Coordinators ###
-## Conjunctions
 Coord[TYPE=conj] -> 'and' 
 Coord[TYPE=disj] -> 'but' | 'or' 
 
@@ -276,22 +267,31 @@ P ->  'through' | 'to' | 'under' | 'up' | 'with'
 ### Cardinal Numbers ###
 CD -> '87' | '11pm' | 'one' | 'two' | 'seven' | '17' | '135' | '1655' | '7' | '1985'
 
+
 ### Ordinals ###
 Ordinal -> 'first'
 
-### Quantifier ###
+
+### Quantifiers ###
 Quantifier -> 'many' | 'few'
 
+
 ### Adjectives ###
+## Neutral Adjectives ##
 Adj -> 'flat' | 'main' | 'direct' | 'potential' | 'far'
 
+## Positive Adjectives ##
 Adj[SENTIMENT=pos] -> 'perfect' | 'terrific' | 'rich' | 'addicting' | 'fun' | 'cool' | 'good' | 'easy' | 'nice' | 'excellent'
 Adj[SENTIMENT=pos] -> 'strong' | 'independent' | 'great' | 'few' | 'rare' | 'cute' | 'silky' | 'lyrical' | 'smart' | 'AWSOME' | 'entertaining'
 
+## Negative Adjectives ##
 Adj[SENTIMENT=neg] -> 'uninventive' | 'simple' | 'disappointed' | 'horrible' | 'lousy' | 'basic' | 'bad' | 'terrible'
+
+
 
 ### Adverbs ###
 Adv -> 'also' | 'soon' | 'quickly' | 'just' | 'even' | 'extremely' | 'really' | 'very' | 'much' | 'away'
+
 Adv[SENTIMENT=pos] -> 'better'
 
 
@@ -326,6 +326,7 @@ ProN[TYPE=rflex, NUM=pl, PERS=3] -> 'themselves'
 ## Relative type
 ProN[TYPE=relative] -> 'that' | 'who'
 
+
 ### Proper Nouns ###
 # Do not need to be preceded by determiner
 ProperNoun[NUM=sg, NEED_DET=0] -> 'NG2' | 'Guthrie' | 'Eragon' | 'Mr' 'Lieven'
@@ -350,7 +351,11 @@ Noun[NUM=pl, PERS=3] -> 'songs' | 'essentials' | 'exercises'
 Noun[NUM=sg, PERS=3, MASS=1] -> 'cancer' | 'incarceration' | 'time' | 'learning' | 'gameplay' | 'job' | 'bias'
 Noun[NUM=sg, PERS=3, MASS=1, SENTIMENT=neg] -> 'bore'
 
+
 ### Verbs ###
+
+# A modal verb takes a clause as an argument
+TV[TENSE=simple_pres, ARG1=cl] -> Modal
 
 ## Tense: Simple Present ##
 IV[TENSE=simple_pres, NUM=sg] -> 'disappears' | 'walks'
@@ -361,15 +366,13 @@ TV[TENSE=simple_pres, NUM=sg, ARG1=pp] -> 'is' | 'resides' | 'plans' | 'works' |
 TV[TENSE=simple_pres, NUM=sg, ARG1=adj] -> 'is' | 'taste'
 TV[TENSE=simple_pres, NUM=sg, ARG1=cl] -> 'says'
 
-# A modal verb takes a clause as an argument
-TV[TENSE=simple_pres, ARG1=cl] -> Modal
-
 IV[TENSE=simple_pres, NUM=pl] -> 'disappear' | 'walk'
 TV[TENSE=simple_pres, NUM=pl, ARG1=np] -> 'play' | 'are' | 'represent' | 'back' | 'open'
 TV[TENSE=simple_pres, NUM=pl, ARG1=adj] -> 'are'
 TV[TENSE=simple_pres, NUM=pl, ARG1=cl] -> 'claim'
 
 DTV[TENSE=simple_pres, NUM=pl, ARG1=np, ARG2=pp] -> 'obtain'
+
 
 ## Tense: Simple Past ##
 IV[TENSE=simple_past] -> 'disappeared' | 'walked' 
@@ -383,7 +386,6 @@ TV[TENSE=simple_past, ARG1=cl] -> 'seemed'
 
 DTV[TENSE=simple_past, ARG1=np, ARG2=pp] -> 'wrote' | 'named' | 'elected' | 'discovered' | 'became'
 DTV[TENSE=simple_past, ARG1=pp, ARG2=pp] -> 'relied'
-
 
 TTV[TENSE=simple_past, ARG1=np, ARG2=pp, ARG3=pp] -> 'escaped'
 
@@ -408,8 +410,8 @@ TV[TENSE=past_participle, ARG1=cl] -> 'said'
 DTVBar[TENSE=past_participle, ARG1=np, ARG2=pp] -> 'wrote' | 'backed'
 DTVBar[TENSE=past_participle, ARG1=pp, ARG2=pp] -> 'approached' | 'formed' | 'linked'
 
+
 ## Present Participle ##
 IV[TENSE=pres_participle] -> 'disappearing' | 'walking' 
 TV[TENSE=pres_participle, ARG1=pp, SENTIMENT=pos] -> 'maturing'
 DTV[TENSE=pres_participle, ARG1=np, ARG2=pp] -> 'transporting' 
-
